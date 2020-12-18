@@ -14,6 +14,9 @@ public class Main {
 		Funciones.bucle(num);
 		
 		System.out.print("Ahora introduce 2 enteros: ");
+		System.out.println("^*************************");
+		
+		
 		num = entrada.nextInt();
 		System.out.print("Dame el segundo: ");
 		int num2 = entrada.nextInt();
