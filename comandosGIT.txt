@@ -1,0 +1,60 @@
+git init      -> Iniciar una carpeta para que haga el control sobre ella.
+
+git status -s  -> enseña como están actaulizados los archivos de la carpeta.
+
+git add index.html    -> para añadir la versión de ese archivo en ese momento.
+
+git commit -m "Descripcion del cambio del trabajo"          -> para hacer el cambio, el commit. se registra.
+
+Para hacer las dos cosas a la vez:
+
+git commit -am "descripcion"      -> cuando se hagan cambios y se suban hacer eso.
+
+git log --oneline          -> Enseña las versiones de el ultimo archivo.
+
+git reset --hard [numero de parte en el que esta el archivo]		-> Podria hacer que el archivo recuperase esa version.
+
+
+------SUBIRLO A GITHUB-------
+
+git remote add origin [ruta repositorio]
+
+(SI da error: fatal remote... se podruia hacer el remove del origin.)   git remote rm origin
+
+---subir archivo a la nube ---   $git push -u origin main
+
+--bajar lo que hay en la nube -- $git pull
+
+//// hacer el pull del repositorio a tu sitio local.
+git pull [repositorio] master
+
+---TAGS--- Versiones del proyecto.
+
+git tag 17-12-20v1 -m "Versión 1 del proyecto"
+
+--Subir el tag--- git push --tags
+
+----------CLONAR PROYECTO-------------Abriendo en la carpeta que queremos clonar.
+git clone "repositorio"
+
+
+
+-------CREAR UNA RAMA--------
+git branch "nombre"
+
+--mostrar las ramas y con la que estás trabajando--- git branch
+
+--moverte de rama----  git checkout "nombre"
+
+
+*Ahora por ejemplo cambiariamos algo, pues hariamos:
+
+git add .     (añade todo)
+git commit -m "saludo agregado"
+
+luego iriamos al MAIN y no lo tendríamos,.
+ 
+para hacerle el MERGE...
+
+git merge "nombre del branch que quieres merge"
+
