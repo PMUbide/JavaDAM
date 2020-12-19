@@ -13,6 +13,7 @@ public class Array_tarea2_ejer2 {
 //		recaudada.
 		ArrayList <Persona> cinesa = new ArrayList <Persona> ();
 		int num_ale = 51;
+		System.out.println("PROGRAMA");
 		while (num_ale > 50) {
 			num_ale = (int) (100 * Math.random());
 			System.out.println ("num elatorio: " + num_ale);
@@ -36,7 +37,7 @@ public class Array_tarea2_ejer2 {
 				recaudado += 3.5;
 			}
 		}
-		System.out.println ("El dinero recaudado es: " + recaudado);
+		System.out.println ("El total del dinero recaudado es: " + recaudado);
 		
 	}
 	
