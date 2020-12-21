@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import Array2.Persona;
+
 public class EjemploListas {
 	public static void main (String [] args) {
 		ArrayList<String> listaAlumnos = new ArrayList<String>();
