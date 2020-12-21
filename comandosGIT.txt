@@ -21,7 +21,7 @@ git remote add origin [ruta repositorio]
 
 (SI da error: fatal remote... se podruia hacer el remove del origin.)   git remote rm origin
 
----subir archivo a la nube ---   $git push -u origin main
+---subir archivo a la nube ---   $git push -u origin main      git push -u origin master
 
 --bajar lo que hay en la nube -- $git pull
 
