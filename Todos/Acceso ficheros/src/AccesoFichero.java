@@ -11,18 +11,26 @@ public class AccesoFichero {
 	class LeerFichero{
 		
 		public void lee() {
+			
 			try {
+				
 				FileReader entrada = new FileReader ("F:/Programacion/nuevo.txt");
+				
 				int c = entrada.read ();
+				
 				while (c != -1) {
 					c = entrada.read ();
 					char letra = (char) c;
 					System.out.print (letra);
 				}
-				entrada.close();
+				
+				entrada.close(); //Para cerrar el metodo de entrada.
+				
 			} catch (IOException e) { // Este método te obliga a tener el try/catch.
 				// TODO Auto-generated catch block
+				
 				System.out.println ("No se ha encontrado el archivo.");
+				
 			}
 		}
 	}
