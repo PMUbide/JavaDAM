@@ -41,7 +41,6 @@ public class Main {
 		}
 		System.out.println("Usuario : " + cuenta.getTitular() + ". Tu saldo es: " + cuenta.getCantidad() + " €.");
 		System.out.println("Gracias, hasta pronto.");
-		
 	}
 
 }
