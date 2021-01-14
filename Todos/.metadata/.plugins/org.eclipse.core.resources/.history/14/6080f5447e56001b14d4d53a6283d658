@@ -7,7 +7,7 @@ public interface Vehiculo {
 	
 	String girar (String direccion);
 	
-	//Hecho hoy por la tarde.
+	
 	
 	String frenar (int cuanto);
 	String acelerar (int cuanto);
