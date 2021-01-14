@@ -216,7 +216,6 @@ public class JuegoMain {
 			}
 			resultado += "El resultado de " + num1 + " + " + num2 + " = " + (num1+num2) + " ----- " + ((num1+num2) == respuesta ? "Acierto" : "Fallo") + "\n";
 			contOperacion++;
-			
 		}
 		double finish = System.currentTimeMillis(); //Otro contador del tiempo al acabar en milisegundos.
 		System.out.println();

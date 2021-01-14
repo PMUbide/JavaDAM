@@ -1,7 +1,8 @@
 package Ejercicio3;
 
 
-public class Electrodomestico {
+class Electrodomestico implements Comparable, maquinas{
+	//Tiene que estar obligado a implementar el método abstracto de la interfaz.
 	protected double precioBase;
 	protected String color; //colores blanco, negro, rojo, azul y gris.
 	protected String consumo; // Letra entre A y F
@@ -16,7 +17,7 @@ public class Electrodomestico {
 		this.consumo = "F";
 		this.peso = 5;
 	}
-	public Electrodomestico(double precioBase, double peso) {
+	public Electrodomestico (double precioBase, double peso) {
 		this.id = idNuevo;
 		idNuevo++;
 		this.color = "blanco";
@@ -24,7 +25,7 @@ public class Electrodomestico {
 		this.peso = peso;
 		this.precioBase = precioBase;
 	}
-	public Electrodomestico(double precioBase, String color, String consumo, double peso) {
+	public Electrodomestico (double precioBase, String color, String consumo, double peso) {
 		this.id = idNuevo;
 		idNuevo++;
 		this.color = comprobarColor(color);
@@ -42,6 +43,7 @@ public class Electrodomestico {
 			return "F"; 
 		}
 	}
+	
 	public String comprobarColor (String color) {
 		if (color.equalsIgnoreCase("blanco") || color.equalsIgnoreCase("azul") ||
 				color.equalsIgnoreCase("negro") || color.equalsIgnoreCase("rojo") || color.equalsIgnoreCase("gris") ) {
@@ -51,6 +53,7 @@ public class Electrodomestico {
 			return "blanco";
 		}
 	}
+	
 	public double precioFinal () {
 		double incremento = 0;
 		if (consumo.equalsIgnoreCase("A")) {
@@ -116,8 +119,29 @@ public class Electrodomestico {
 	}
 
 	
+	//Método del Compare. Public para que sea accesible.
 	
-
+	public int compareTo(Object miObjeto) {
+		
+		//Casting, refundición del objeto.
+		
+		Electrodomestico otro = (Electrodomestico) miObjeto;
+		
+		if(this.precioBase < otro.precioBase) {
+			return -1;
+		}
+		if(this.precioBase > otro.precioBase) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	
+	public boolean encender(boolean consumo) {
+		return true;
+	}
+	
+	
 	
 	
 	
