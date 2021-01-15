@@ -1,0 +1,68 @@
+package JuegoVida;
+
+public class SegundoPatron {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Configuración 1 patrón intermitente.
+				String [][] bloque = new String[5][5];
+				//fila 1
+				bloque [0][0] = new String (" ");
+				bloque [0][1] = new String (" ");
+				bloque [0][2] = new String (" ");
+				bloque [0][3] = new String (" ");
+				bloque [0][4] = new String (" ");
+				//fila 2
+				bloque [1][0] = new String (" ");
+				bloque [1][1] = new String (" ");
+				bloque [1][2] = new String (" ");
+				bloque [1][3] = new String (" ");
+				bloque [1][4] = new String (" ");
+				//fila 3
+				bloque [2][0] = new String (" ");
+				bloque [2][1] = new String ("*");
+				bloque [2][2] = new String ("*");
+				bloque [2][3] = new String ("*");
+				bloque [2][4] = new String (" ");
+				//fila 4
+				bloque [3][0] = new String (" ");
+				bloque [3][1] = new String (" ");
+				bloque [3][2] = new String (" ");
+				bloque [3][3] = new String (" ");
+				bloque [3][4] = new String (" ");
+				//fila 5
+				bloque [4][0] = new String (" ");
+				bloque [4][1] = new String (" ");
+				bloque [4][2] = new String (" ");
+				bloque [4][3] = new String (" ");
+				bloque [4][4] = new String (" ");
+				//Empieza el desarrollo de la programa.
+				int veces = 0;
+				int celActual = 0;
+				//30 generaciones predeterminadas
+				while(veces <= 30) {
+					celActual = Main.contarCel(bloque);
+					//Imprimir información
+					System.out.println("GENERACIÓN: " + veces);
+					//visualizar el tablero inicial
+					Main.visualizar(bloque);
+					System.out.println();
+					//Aplica metodos de crear o no una celula mientras no llegue al último bucle.
+					if(veces != 30) {
+						//Método para vivir o morir.
+						Main.supervivencia(bloque);
+					}
+					if(celActual == 0) { //Si No hay celulas vivas, se extingue la colonia
+						System.out.println("COLONIA EXTENGUIDA");
+						break;
+					}
+					veces++;
+				}
+				
+				if(veces == 30 + 1) {
+					System.out.println("Quedan " + celActual + " vivas.");
+				}
+				
+	}
+
+}

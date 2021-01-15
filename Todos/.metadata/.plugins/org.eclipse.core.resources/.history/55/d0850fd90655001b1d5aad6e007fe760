@@ -1,0 +1,54 @@
+package JuegoVida;
+
+public class Tripleta {
+
+	private static int genInicial=0;
+	private int generacion;
+	private int numCelVivas;
+	private int numCelNuevas;
+	
+	//Constructor del objeto
+	public Tripleta(int numCelVivas, int numCelNuevas) {
+		this.generacion = genInicial;
+		genInicial++;
+		this.numCelVivas = numCelVivas;
+		this.numCelNuevas = numCelNuevas;
+	}
+
+	public Tripleta() {
+		this.generacion = genInicial;
+		genInicial++;
+	}
+	
+	
+	
+	public int getGeneracion() {
+		return generacion;
+	}
+
+	public void setGeneracion(int generacion) {
+		this.generacion = generacion;
+	}
+
+	public int getNumCelVivas() {
+		return numCelVivas;
+	}
+
+	public void setNumCelVivas(int numCelVivas) {
+		this.numCelVivas = numCelVivas;
+	}
+
+	public int getNumCelNuevas() {
+		return numCelNuevas;
+	}
+
+	public void setNumCelNuevas(int numCelNuevas) {
+		this.numCelNuevas = numCelNuevas;
+	}
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,17 @@
+package IntefacesEjer1;
+
+public interface Vehiculo {
+	
+	String girar (String direccion);
+	
+	
+	
+	String frenar (int cuanto);
+	String acelerar (int cuanto);
+	
+	
+	
+	
+	
+
+}

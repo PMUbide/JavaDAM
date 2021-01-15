@@ -1,0 +1,24 @@
+package IntefacesEjer1;
+
+import java.util.ArrayList;
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList <Vehiculo> vehiculos = new ArrayList <Vehiculo> ();
+
+		Moto mochillo = new Moto ();
+		Moto mochillo = new Moto ();
+		Coche balaBlanca = new Coche();
+		Coche balaBlanca = new Coche();
+		Coche balaBlanca = new Coche();
+		
+		
+		
+	}
+
+}
