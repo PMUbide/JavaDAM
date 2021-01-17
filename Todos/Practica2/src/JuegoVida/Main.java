@@ -88,7 +88,7 @@ public class Main {
 				Scanner entrada = new Scanner (System.in);
 				System.out.println("Introduce el número de " + pregunta);
 				num = entrada.nextInt();
-				if(num < 0) {
+				if(num <= 0) {
 					System.out.println("error");
 					correcto = false;
 				}
