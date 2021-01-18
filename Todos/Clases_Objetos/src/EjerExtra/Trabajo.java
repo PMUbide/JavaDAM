@@ -2,7 +2,7 @@ package EjerExtra;
 
 public class Trabajo {
 	protected int identificador;
-	private static int idInicial = 0;
+	private static int idInicial = 1;
 	protected String descripcion;
 	protected double horas = 0;
 	protected boolean finalizado = false;
@@ -13,7 +13,7 @@ public class Trabajo {
 		this.identificador = idInicial;
 		idInicial++;
 		this.descripcion = descripcion;
-		this.horas += horas;
+		this.horas = horas;
 		this.finalizado = finalizado;
 		this.precio = horas * 30;
 	}
@@ -21,7 +21,6 @@ public class Trabajo {
 	public Trabajo() {
 		
 	}
-	
 	
 	public int getPrecio() {
 		return identificador;
@@ -34,11 +33,6 @@ public class Trabajo {
 	public void setIdentificador(int identificador) {
 		this.identificador = identificador;
 	}
-
-	public int getIdInicial() {
-		return idInicial;
-	}
-
 
 	public String getDescripcion() {
 		return descripcion;
@@ -55,6 +49,10 @@ public class Trabajo {
 	public void setHoras(double horas) {
 		if(!finalizado) {
 			this.horas += horas;
+			this.precio = this.horas * 30;
+		}
+		else {
+			System.out.println("Trabajo finalizado.");
 		}
 	}
 

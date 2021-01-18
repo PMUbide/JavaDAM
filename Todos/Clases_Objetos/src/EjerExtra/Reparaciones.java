@@ -10,6 +10,13 @@ public class Reparaciones extends Trabajo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Reparaciones(String descripcion, double horas, boolean finalizado, int tipo) {
+		super(descripcion, horas, finalizado);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 
 	public Reparaciones(String descripcion, double horas, boolean finalizado, int tipo, double precioMaterial) {
 		super(descripcion, horas, finalizado);
