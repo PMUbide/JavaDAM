@@ -49,10 +49,10 @@ public class Trabajo {
 	public void setHoras(double horas) {
 		if(!finalizado) {
 			this.horas += horas;
-			this.precio = this.horas * 30;
+			this.precio += horas * 30;
 		}
 		else {
-			System.out.println("Trabajo finalizado.");
+			System.out.println("Ese trabajo está finalizado.");
 		}
 	}
 

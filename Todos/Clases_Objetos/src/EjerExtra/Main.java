@@ -35,6 +35,7 @@ public class Main {
 					incluyeMaterial(datos);
 					break;
 				case 4:
+					finalizaTrabajo(datos);
 					break;
 				case 5:
 					System.out.println("hola");
@@ -82,7 +83,7 @@ public class Main {
 			double tiempo = in.nextInt();
 			Revisiones revision1 = new Revisiones(descrip, tiempo, false);
 			nombre.add(revision1);
-			System.out.println("Trabajo introducido. ID = "+ revision1.getIdentificador());
+			System.out.println("Trabajo introducido. ID = " + revision1.getIdentificador());
 		}
 		else if(registro.equalsIgnoreCase("reparacion")) {
 			System.out.println("DESCRIPCIÓN: ");
@@ -93,7 +94,7 @@ public class Main {
 			int eleccion = comprobarEntrada(2);
 			Reparaciones reparacion1 = new Reparaciones(descrip, tiempo, false, eleccion);
 			nombre.add(reparacion1);
-			System.out.println("Trabajo introducido. ID = "+ reparacion1.getIdentificador());
+			System.out.println("Trabajo introducido. ID = " + reparacion1.getIdentificador());
 		}
 		else {
 			System.out.println("Tipo de trabajo introducido incorrecto");
@@ -129,45 +130,46 @@ public class Main {
 		System.out.println("Indica el coste de las piezas. ");
 		double material = in.nextDouble();
 		boolean comprobar = false;
-		
 		for (int i = 0; i < nombre.size(); i++) {
-		
-			if (indicadorId   == nombre.get(i).getIdentificador() && nombre.get(i) instanceof Reparaciones) {
+			if (indicadorId   == nombre.get(i).getIdentificador() && (nombre.get(i) instanceof Reparaciones)) {
 				 ((Reparaciones) nombre.get(i)).setPrecioMaterial(material);
 				 System.out.println("Es reparacion");
-				comprobar = true;
+				 comprobar = true;
+				 break;
 			}
 			else if(indicadorId   == nombre.get(i).getIdentificador() && (nombre.get(i) instanceof Revisiones)) {
 				System.out.println("Ese trabajo es una revisión.");
+				comprobar = true;
+				break;
 			}
-		
-		
 		}
-//		
-//		for (int i = 0; i < nombre.size(); i++) {
-//			
-//			if (indicadorId  == nombre.get(i).getIdentificador() && nombre.get(i) instanceof Reparaciones) {
-//				 ((Reparaciones) nombre.get(i)).setPrecioMaterial(material);
-//				comprobar = true;
-//				break;
-//			}
-//			else if(indicadorId  == nombre.get(i).getIdentificador() && nombre.get(i) instanceof Revisiones) {
-//				
-//			}
-//		}
-//		if(!comprobar) {
-//			System.out.println("No existe ese ID.");
-//			
-//		}
+		if(!comprobar) {
+			System.out.println("No existe ese ID.");
+			
+		}
 		
-		
-		
+	}
+	
+	public static void finalizaTrabajo(ArrayList<Trabajo> nombre) {
+		System.out.println("Indica el ID del trabajo:");
+		Scanner in = new Scanner (System.in);
+		int indicadorId = in.nextInt();
+		boolean comprobar = false;
+		for (int i = 0; i < nombre.size(); i++) {
+			if (indicadorId == nombre.get(i).getIdentificador()) {
+				nombre.get(i).setFinalizado(true);
+				System.out.println("Trabajo finalizado.");
+				comprobar = true;
+				break;
+			}
+		}
+		if(!comprobar) {
+			System.out.println("No existe ese ID.");
+		}
 		
 		
 		
 	}
-	
-	
 	
 	
 	
@@ -177,7 +179,7 @@ public class Main {
 		int indicadorId = in.nextInt();
 		boolean comprobar = false;
 		for (int i = 0; i < nombre.size(); i++) {
-			if (indicadorId   == nombre.get(i).getIdentificador()) {
+			if (indicadorId == nombre.get(i).getIdentificador()) {
 				System.out.println(nombre.get(i).ToString());
 				comprobar = true;
 				break;

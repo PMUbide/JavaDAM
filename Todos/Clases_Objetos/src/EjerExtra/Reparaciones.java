@@ -14,6 +14,7 @@ public class Reparaciones extends Trabajo {
 	public Reparaciones(String descripcion, double horas, boolean finalizado, int tipo) {
 		super(descripcion, horas, finalizado);
 		// TODO Auto-generated constructor stub
+		this.tipo = tipo;
 	}
 	
 	
@@ -21,12 +22,7 @@ public class Reparaciones extends Trabajo {
 	public Reparaciones(String descripcion, double horas, boolean finalizado, int tipo, double precioMaterial) {
 		super(descripcion, horas, finalizado);
 		// TODO Auto-generated constructor stub
-		if(tipo == 1) {
-			this.precio += precioMaterial * 1.1;
-		}
-		else if(tipo == 2) {
-			this.precio += precioMaterial * 1.3;
-		}
+		
 	}
 
 	
@@ -45,13 +41,22 @@ public class Reparaciones extends Trabajo {
 		return precioMaterial;
 	}
 
+	public int getTipo() {
+		return tipo;
+	}
 	public void setPrecioMaterial(double precioMaterial) {
 		if(!finalizar) {
-			this.precioMaterial += precioMaterial;
+			if(this.tipo == 1) {
+				this.precioMaterial += precioMaterial * 1.1;
+			}
+			else if(this.tipo == 2) {
+				this.precioMaterial += precioMaterial * 1.3;
+			}
 		}
 		else {
 			System.out.println("Ese trabajo está finalizado.");
 		}
+		this.precio += this.precioMaterial;
 	}
 	
 	

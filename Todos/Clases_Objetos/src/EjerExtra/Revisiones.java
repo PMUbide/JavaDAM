@@ -10,7 +10,16 @@ public class Revisiones extends Trabajo{
 		
 		
 	}
-
 	
+	@Override
+	public void setHoras(double horas) {
+		if(!finalizado) {
+			this.horas += horas;
+			this.precio += horas * 20;
+		}
+		else {
+			System.out.println("Trabajo finalizado.");
+		}
+	}
 	
 }
