@@ -32,11 +32,13 @@ public class Main {
 					aumentaHoras(datos);
 					break;
 				case 3:
+					incluyeMaterial(datos);
 					break;
 				case 4:
 					break;
 				case 5:
-					System.out.println(datos.get(0).ToString());
+					System.out.println("hola");
+					muestraTrabajo(datos);
 					break;
 			}
 		}
@@ -100,7 +102,7 @@ public class Main {
 	}
 	
 	public static void aumentaHoras(ArrayList<Trabajo> nombre) {
-		System.out.println("Indica el indicador del trabajo:");
+		System.out.println("Indica el ID del trabajo:");
 		Scanner in = new Scanner (System.in);
 		int indicadorId = in.nextInt();
 		System.out.println("Indica el número de horas a aumentar: ");
@@ -118,7 +120,72 @@ public class Main {
 			
 		}
 		
+	}
+	
+	public static void incluyeMaterial(ArrayList<Trabajo> nombre) {
+		System.out.println("Indica el ID del trabajo:");
+		Scanner in = new Scanner (System.in);
+		int indicadorId = in.nextInt();
+		System.out.println("Indica el coste de las piezas. ");
+		double material = in.nextDouble();
+		boolean comprobar = false;
 		
+		for (int i = 0; i < nombre.size(); i++) {
+		
+			if (indicadorId   == nombre.get(i).getIdentificador() && nombre.get(i) instanceof Reparaciones) {
+				 ((Reparaciones) nombre.get(i)).setPrecioMaterial(material);
+				 System.out.println("Es reparacion");
+				comprobar = true;
+			}
+			else if(indicadorId   == nombre.get(i).getIdentificador() && (nombre.get(i) instanceof Revisiones)) {
+				System.out.println("Ese trabajo es una revisión.");
+			}
+		
+		
+		}
+//		
+//		for (int i = 0; i < nombre.size(); i++) {
+//			
+//			if (indicadorId  == nombre.get(i).getIdentificador() && nombre.get(i) instanceof Reparaciones) {
+//				 ((Reparaciones) nombre.get(i)).setPrecioMaterial(material);
+//				comprobar = true;
+//				break;
+//			}
+//			else if(indicadorId  == nombre.get(i).getIdentificador() && nombre.get(i) instanceof Revisiones) {
+//				
+//			}
+//		}
+//		if(!comprobar) {
+//			System.out.println("No existe ese ID.");
+//			
+//		}
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	public static void muestraTrabajo(ArrayList<Trabajo> nombre) {
+		System.out.println("Indica el ID del trabajo:");
+		Scanner in = new Scanner (System.in);
+		int indicadorId = in.nextInt();
+		boolean comprobar = false;
+		for (int i = 0; i < nombre.size(); i++) {
+			if (indicadorId   == nombre.get(i).getIdentificador()) {
+				System.out.println(nombre.get(i).ToString());
+				comprobar = true;
+				break;
+			}
+		}
+		if(!comprobar) {
+			System.out.println("No existe ese ID.");
+		}
 		
 	}
 	

@@ -49,6 +49,9 @@ public class Reparaciones extends Trabajo {
 		if(!finalizar) {
 			this.precioMaterial += precioMaterial;
 		}
+		else {
+			System.out.println("Ese trabajo está finalizado.");
+		}
 	}
 	
 	
