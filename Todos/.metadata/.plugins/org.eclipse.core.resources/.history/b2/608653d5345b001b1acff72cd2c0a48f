@@ -1,0 +1,67 @@
+package LeeFicheros;
+import java.io.FileNotFoundException;
+import java.util.*;
+public class ejercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		¡Bienvenido al programa de escritura sobre ficheros de texto!
+//		Indique la ruta del fichero a escribir: /Ficheros/fichero1.txt
+//		-------------------------------------------------------------------------------------------------
+//		Introduzca lo que desea escribir: 3456
+//		El número entero 3456 se ha escrito correctamente en el fichero /Ficheros/fichero1.txt
+//		Introduzca lo que desea escribir: "Hola"
+//		La cadena de caracteres "Hola" se ha escrito correctamente en el fichero /Ficheros/fichero1.txt
+//		Introduzca lo que desea escribir: fin
+//		¡El programa ha finalizado! ¡Hasta luego!
+
+//		Cuando el usuario introduce un número entero, se debe escribir la siguiente línea de texto en el fichero:
+//		 - Número entero introducido por el usuario: 3456
+//		Cuando el usuario introduce una cadena de caracteres, se debe escribir la siguiente línea de texto en el fichero:
+//		 - Cadena de caracteres introducida por el usuario: "Hola"
+		
+//		¡CONSEJO!: para saber si un String en realidad es un número entero,
+//		implementa una nueva función "isInteger(String numero)" que devuelva true si y sólo si [numero] es un entero.
+//		Utiliza el método Integer.parseInt() de Java.
+		
+		System.out.println("¡Bienvenido al programa de escritura sobre ficheros de texto!");
+		Scanner in = new Scanner(System.in);
+		System.out.println("Indique ruta del fichero a escribir: ");
+		String ruta = in.next();
+		guardarResultados(ruta, in);
+		
+		
+		
+		
+		
+	}
+	
+	private static void guardarResultados(String nombre, Scanner entrada) {
+		try {
+			Formatter salida = new Formatter(nombre);
+			System.out.println("Introduzca lo que desea escribir: ");
+			String respuesta = entrada.next();
+			if(comprobarInt(respuesta)) { //Crea un int
+				 System.out.println("Número entero introducido por el usuario: " + respuesta);
+			}else { //Guardará un String
+				System.out.println("Cadena de caracteres introducido por el usuario: " + respuesta);
+			}
+			System.out.println("FIN");
+			salida.close();
+		} catch(FileNotFoundException e) {
+			System.out.println("El fichero " + nombre + " no ha podido ser creado.");
+		}
+	}
+	
+	private static boolean comprobarInt(String name) {
+			try{
+				int a = Integer.parseInt(name);
+				return true;
+			}catch(NumberFormatException e){
+				return false;
+			}
+			
+		
+	}
+
+}

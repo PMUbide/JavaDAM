@@ -1,0 +1,76 @@
+package LeeFicheros;
+import java.io.FileNotFoundException;
+import java.util.*;
+public class ejercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		¡Bienvenido al programa de escritura sobre ficheros de texto!
+//		Indique la ruta del fichero a escribir: /Ficheros/fichero1.txt
+//		-------------------------------------------------------------------------------------------------
+//		Introduzca lo que desea escribir: 3456
+//		El número entero 3456 se ha escrito correctamente en el fichero /Ficheros/fichero1.txt
+//		Introduzca lo que desea escribir: "Hola"
+//		La cadena de caracteres "Hola" se ha escrito correctamente en el fichero /Ficheros/fichero1.txt
+//		Introduzca lo que desea escribir: fin
+//		¡El programa ha finalizado! ¡Hasta luego!
+
+//		Cuando el usuario introduce un número entero, se debe escribir la siguiente línea de texto en el fichero:
+//		 - Número entero introducido por el usuario: 3456
+//		Cuando el usuario introduce una cadena de caracteres, se debe escribir la siguiente línea de texto en el fichero:
+//		 - Cadena de caracteres introducida por el usuario: "Hola"
+		
+//		¡CONSEJO!: para saber si un String en realidad es un número entero,
+//		implementa una nueva función "isInteger(String numero)" que devuelva true si y sólo si [numero] es un entero.
+//		Utiliza el método Integer.parseInt() de Java.
+		
+		System.out.println("¡Bienvenido al programa de escritura sobre ficheros de texto!");
+		Scanner in = new Scanner(System.in);
+		System.out.println("Indique ruta del fichero a escribir: ");
+		String ruta = in.next();
+		Formatter 
+		
+		
+		
+		
+		
+	}
+	
+	private static void guardarResultados(String nombre) {
+		try {
+			/*
+			 * Se crea un objeto [Formatter] al que se asocia un fichero deno-
+			 * minado [nombre].
+			 */
+			Formatter salida = new Formatter(nombre);
+			/*
+			 * Se almacena en el buffer la informaciÃ³n a escribir en el fichero
+			 */
+			salida.format(" x (en grados)     sen(x)     cos(x)\n");
+			salida.format("===============   ========   ========\n");
+			/*
+			 * Se solicita al buffer que se vacÃ­e y escriba toda la informaciÃ³n
+			 * que tiene almacenada en el fichero.
+			 */
+			salida.flush();
+			/*
+			 * Se escriben las lÃ­neas de datos de la tabla
+			 */
+			for(int i = 0; i <= 12; i++) {
+				double angulo = i*30*Math.PI/180.0;
+				salida.format("    " + 30*i + "   " + Math.sin(angulo) + "   " + 
+				Math.cos(angulo) + "\n");
+			}
+			/*
+			 * Se libera el fichero que almacena la tabla de datos. La llamada
+			 * al metodo close() tambiÃ©n libera la informaciÃ³n del buffer, por 
+			 * lo tanto escribe toda la tabla de datos en el fichero antes
+			 * de cerrarlo.
+			 */
+			salida.close();
+		} catch(FileNotFoundException e) {
+			System.out.println("El fichero " + nombre + " no ha podido ser creado.");
+		}
+	}
+
+}
