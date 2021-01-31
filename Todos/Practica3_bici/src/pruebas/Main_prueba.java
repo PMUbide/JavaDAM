@@ -64,15 +64,15 @@ public class Main_prueba {
 				System.out.println("El usuario " + i.getIdUsuario() + " ha hecho un total de " + veces + " traslados.");
 			}
 			
-			Arrays.sort(nueva);
+			//Arrays.sort(nueva);
 			//
 //			usos.add(i);
 			veces = 0;
 			
-		}
-		for(int i = 0; i < nueva.length; i++ ) {
-			System.out.println(nueva[i].toString());
-		}
+//		}
+//		for(int i = 0; i < nueva.length; i++ ) {
+//			System.out.println(nueva[i].toString());
+//		}
 		
 		
 		
@@ -89,4 +89,5 @@ public class Main_prueba {
 		
 	}
 
+	}
 }
