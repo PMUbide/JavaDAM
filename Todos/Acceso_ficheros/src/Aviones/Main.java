@@ -196,7 +196,6 @@ public class Main {
 			}
 		}
 		System.out.println("En horario " + horario + " veces " + contador);
-
 	}
 
 	/**
@@ -230,7 +229,6 @@ public class Main {
 
 	/**
 	 * Método que saca el avión con más accidentes
-	 * 
 	 * @param a
 	 */
 	public static void maxAccidentes(ArrayList<Accidentes> a) {
