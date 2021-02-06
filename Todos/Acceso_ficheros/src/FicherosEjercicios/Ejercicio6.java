@@ -13,7 +13,6 @@ public class Ejercicio6 {
 //		que queramos escribir en el fichero. Después de crear el fichero con la información
 //		introducida, deberás mostrar por pantalla el texto del fichero pero variando entre mayúsculas
 //		y minúsculas.
-//
 //		Por ejemplo, si escribo: “Bienvenidos a Plasencia” deberá devolver “bIENVENIDOS A
 //		pLASENCIA”.
 		String ruta = "files/ejercicio6_inicial.txt";

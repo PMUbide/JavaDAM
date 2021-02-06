@@ -22,10 +22,11 @@ public class Main {
 				palabra = fichero.next();
 				datos.add(palabra);
 			}
-			//Le quitamos "," y ".". 
+			//Limpiar código, le quitamos "," y "." y ":" 
 			for(int i = 0; i < datos.size(); i++) {
 				datos.set(i, datos.get(i).replace(",", ""));
 				datos.set(i, datos.get(i).replace(".", ""));
+				datos.set(i, datos.get(i).replace(":", ""));
 			}
 			//Recorrer en un ArrayList del objeto que vaya almacenando los datos
 			String elegida = "";
@@ -45,7 +46,7 @@ public class Main {
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			System.out.println("ERROR");
+			System.out.println("ERROR, archivo no encontrado.");
 		}
 		for(int j = 0; j < objetos.size(); j++ ) {
 			System.out.printf(" %20s %10s %20s %d %n", "Palabra |||", objetos.get(j).getPalabra(), "     ||||  aparece ", objetos.get(j).getConcurrencias());
@@ -55,7 +56,7 @@ public class Main {
 		String palabraBuscar = in.nextLine();
 		boolean estado = false;
 		for(int i = 0; i < objetos.size(); i++) {
-			if(palabraBuscar.equals(objetos.get(i).getPalabra())) {
+			if(palabraBuscar.equalsIgnoreCase((objetos.get(i).getPalabra()))) {
 				System.out.println("PAlabra " + palabraBuscar + " encontrada.");
 				System.out.println("Veces que aparece " + objetos.get(i).getConcurrencias());
 				estado = true;
@@ -78,11 +79,5 @@ public class Main {
 	}
 	
 	
-	
-	
-//	public String replace(String palabra, String signo) {
-//		
-//		return "
-//	}
 
 }

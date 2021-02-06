@@ -1,5 +1,6 @@
 package FicherosEjercicios;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Formatter;
@@ -29,7 +30,7 @@ public class Ejercicio5 {
 		try {
 			archivo = new Formatter("files/ejercicio5.txt");
 			String meter = nuevo.toString();
-			System.out.println(meter);
+//			System.out.println(meter);
 			archivo.format(meter);
 			
 		} catch (FileNotFoundException e) {
@@ -37,6 +38,16 @@ public class Ejercicio5 {
 			e.printStackTrace();
 		}
 		archivo.close();
+		
+		try {
+			Scanner ay = new Scanner (new File ("files/ejercicio5.txt"));
+			while(ay.hasNextLine()) {
+				System.out.println(ay.nextLine());
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

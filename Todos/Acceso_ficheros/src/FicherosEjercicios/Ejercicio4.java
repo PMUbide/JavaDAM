@@ -43,7 +43,7 @@ public class Ejercicio4 {
 			while(file2.hasNextLine()) {
 				linea2 += file2.nextLine();
 			}
-			Formatter nuevo = new Formatter (rutaDestino+nombreAcabado);
+			Formatter nuevo = new Formatter (rutaDestino + nombreAcabado);
 			nuevo.format(linea1 + linea2);
 			System.out.println("Archivo CREADO");
 			//CERRAMOS EL FORMATTER
@@ -55,9 +55,6 @@ public class Ejercicio4 {
 			// TODO Auto-generated catch block
 			System.out.println("ERROR");
 		}
-		
-		
-		
 		
 		
 	}
