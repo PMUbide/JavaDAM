@@ -2,6 +2,9 @@ package Aviones;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,23 +64,51 @@ public class Main {
 //			
 //		}
 		/* Saca el avion que mas veces aparece */
-		System.out.println("\nAvion que mas veces aparece: ");
-		maxAccidentes(datos);
-		/* Saca el lugar que tiene más accidentes */
-		System.out.println("\nLugar con más accidentes: ");
-		maxLugar(datos);
-		String eleccion = "matinal";
-		System.out.println("\nAccidentes por la mañana: ");
-		accidentesHorarios(datos, eleccion);
-		eleccion = "tarde";
-		System.out.println("\nAccidentes por la tarde: ");
-		accidentesHorarios(datos,eleccion);
-		eleccion = "noche";
-		System.out.println("\nAccidentes por la noche: ");
-		accidentesHorarios(datos,eleccion);
-		//Ahora los años y los accidentes.
-		System.out.println("\nLos accidentes aéreos por año: ");
-		accidentesAnuales(datos);
+//		System.out.println("\nAvion que mas veces aparece: ");
+//		maxAccidentes(datos);
+//		/* Saca el lugar que tiene más accidentes */
+//		System.out.println("\nLugar con más accidentes: ");
+//		maxLugar(datos);
+//		String eleccion = "matinal";
+//		System.out.println("\nAccidentes por la mañana: ");
+//		accidentesHorarios(datos, eleccion);
+//		eleccion = "tarde";
+//		System.out.println("\nAccidentes por la tarde: ");
+//		accidentesHorarios(datos,eleccion);
+//		eleccion = "noche";
+//		System.out.println("\nAccidentes por la noche: ");
+//		accidentesHorarios(datos,eleccion);
+//		//Ahora los años y los accidentes.
+//		System.out.println("\nLos accidentes aéreos por año: ");
+//		accidentesAnuales(datos);
+		
+		
+		
+		
+//		
+		//Guardar el arraylist en un fichero de objetos.
+		 File fichero= new File("files/aviones_datos.dat");
+		 try {
+	            if(fichero.createNewFile()) {
+	                System.out.println("Fichero de objetos creado correctamente");
+	            } else {
+	                System.out.println("El fichero de objetos se ha sobreescrito");
+	            }
+	            
+	            ObjectOutputStream oosFP = new ObjectOutputStream(new FileOutputStream(fichero));
+	            
+	            Accidentes ac = new Accidentes("2020", "abc", "10", "gordo");
+	            oosFP.writeObject(ac);
+	            
+//	            for(Accidentes	 i: datos) {
+//	                oosFP.writeObject(i);
+//	            }
+	            oosFP.close();
+	        } catch (IOException e) {
+				// TODO Auto-generated catch block
+	        	System.out.println("FAIL!");
+	        }
+		
 		
 	}
 
@@ -115,13 +146,12 @@ public class Main {
 				veces.add(nuevo);
 			}
 			contador = 0;
-			
 		}
 		System.out.println("Total de accidentes: " + veces.size());
 		for(int i = 0; i < veces.size(); i++) {
 			System.out.println("El año " + veces.get(i).getAnno() + " ha tenido " + veces.get(i).getVeces());
-			
 		}
+		
 		
 	}
 	

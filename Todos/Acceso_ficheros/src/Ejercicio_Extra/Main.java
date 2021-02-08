@@ -3,6 +3,7 @@ package Ejercicio_Extra;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -23,21 +24,21 @@ public class Main {
 		double[] notaspr1 = new double[99];
 		double[] notaspr2 = new double[99];
 		if (leerNotasEquipo(rutaPr1, notaspr1)) {
-			System.out.println("Se han leido bien las notas");
+			System.out.println("Se han leido bien las notas práctica 1");
 		} else {
 			System.out.println("No se han leído bien.");
 		}
 		if (leerNotasEquipo(rutaPr2, notaspr2)) {
-			System.out.println("Se han leido bien las notas");
+			System.out.println("Se han leido bien las notas práctica 2");
 		} else {
 			System.out.println("No se han leído bien.");
 		}
-		for (int i = 0; i < 5; i++) {
-			System.out.println("notas 1 - " + notaspr1[i]);
-		}
-		for (int i = 0; i < 5; i++) {
-			 System.out.println("notas 2 - " + notaspr2[i]);
-		}
+//		for (int i = 0; i < 5; i++) {
+//			System.out.println("notas 1 - " + notaspr1[i]);
+//		}
+//		for (int i = 0; i < 5; i++) {
+//			 System.out.println("notas 2 - " + notaspr2[i]);
+//		}
 		//tabla vacio notas que le vamos a enviar para rellenar.
 		double[] notasFIN1 = new double[99];
 		String rutaEP1 = "files/Ejercicio_Extra/equipos-pr1.txt";
@@ -50,11 +51,33 @@ public class Main {
 		//practica 2, y la otra ruta en el método.
 		asignarNotas(2, rutaEP2, notasFIN2, todos);
 		//IMPRIMIR RESULTADO FINAL.
-		for(int i = 0; i < todos.size(); i++) {
-			System.out.println("El estudiante " + todos.get(i).getNombre() + " con dni " + todos.get(i).getNip() + " tiene las notas PR1: "
-			+ todos.get(i).getNotas()[0] + " notas PR2: " + todos.get(i).getNotas()[1] );
+//		for(int i = 0; i < todos.size(); i++) {
+//			System.out.println("El estudiante " + todos.get(i).getNombre() + " con dni " + todos.get(i).getNip() + " tiene las notas PR1: "
+//			+ todos.get(i).getNotas()[0] + " notas PR2: " + todos.get(i).getNotas()[1] );
+//		}
+		System.out.println();
+		//Iterator.
+		Iterator <Estudiante> mi_iterator = todos.iterator();
+		while(mi_iterator.hasNext()) {
+			System.out.println(mi_iterator.next());
 		}
 
+		
+		
+		
+		
+		
+//		Estudiante a = new Estudiante(todos.get(1));
+//		System.out.println(a.getNombre());
+//		if(a.equals(todos.get(1))) {
+//			System.out.println("Es igual");
+//			
+//		}else System.out.println("no es igual");
+		
+		
+		
+		
+		
 	}
 	
 	
