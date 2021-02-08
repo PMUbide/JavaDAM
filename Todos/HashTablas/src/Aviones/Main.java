@@ -9,8 +9,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -70,8 +68,8 @@ public class Main {
 //			
 //		}
 		/* Saca el avion que mas veces aparece */
-		System.out.println("\nAvion que mas veces aparece: ");
-		maxAccidentes(datos);
+//		System.out.println("\nAvion que mas veces aparece: ");
+//		maxAccidentes(datos);
 //		/* Saca el lugar que tiene más accidentes */
 //		System.out.println("\nLugar con más accidentes: ");
 //		maxLugar(datos);
@@ -115,7 +113,6 @@ public class Main {
 		ArrayList<Accidentes> lista = new ArrayList<>();
 
 		 try {
-			 
 	            ObjectInputStream oisFP = new ObjectInputStream(new FileInputStream(fichero));
 	            while(oisFP.readObject() != null) {
 //	            	Accidentes a = (Accidentes) oisFP.readObject();
@@ -135,40 +132,14 @@ public class Main {
 	        }
 		 
 		 
-//		 for (Accidentes i : lista) {
-//			System.out.println(i);
-//		 }
-		
-		HashMap<String, Integer> aviones_lista = new HashMap<>();
-		aviones_lista = crearAviones(lista);
+		 for (Accidentes i : lista) {
+			System.out.println(i);
+		}
 		 
-		for (String i : aviones_lista.keySet()) {
-				System.out.println("key: " + i + " value: " + aviones_lista.get(i));
-				
-		    }
-//		aviones_lista.entrySet().forEach(entry->{
-//			if(entry.getValue() > 10) {
-//				System.out.println(entry.getKey() + " " + entry.getValue());  
-//				
-//			}
-//		 });
+		 
 		 
 		
 	}
-	
-	 public static HashMap<String, Integer> crearAviones(ArrayList<Accidentes> lista) {
-		    HashMap<String, Integer> aviones = new HashMap<>();
-		    for (Accidentes i : lista) {
-		        if (aviones.isEmpty()) {
-		            aviones.put(i.getTipoAvion(), 1); 
-		        } else if (aviones.containsKey(i.getTipoAvion())) {
-		            aviones.replace(i.getTipoAvion(), aviones.get(i.getTipoAvion() + 1));
-		        } else {
-		            aviones.put(i.getTipoAvion(),1); 
-		        }
-		    }
-		    return aviones;
-		}
 
 	/**
 	 * Método que devuelve TRUE si NO existe anteriormente ese año en el arraylist.

@@ -9,7 +9,9 @@ public class Avion {
 		this.veces = veces;
 	}
 	
-	
+	public String toString(){
+		return "avion: " + nombre + " veces: " + veces;
+	}
 	
 	
 	public String getNombre() {
