@@ -1,6 +1,7 @@
 package PruebAviones;
 
-public class Avion {
+
+public class Avion implements Comparable {
 	private String nombre;
 	private int veces;
 	
@@ -8,6 +9,21 @@ public class Avion {
 		this.nombre = nombre;
 		this.veces = veces;
 	}
+	
+	@Override
+	public int compareTo(Object miObjeto) {
+		//Casting, refundición del objeto.
+		Avion otro = (Avion) miObjeto;
+		if(this.veces < otro.veces) {
+			return 1;
+		}
+		if(this.veces > otro.veces) {
+			return -1;
+		}
+		return 0;
+	}	
+	
+	
 	
 	public String toString(){
 		return "avion: " + nombre + " veces: " + veces;

@@ -141,11 +141,15 @@ public class Main {
 		
 		HashMap<String, Integer> aviones_lista = new HashMap<>();
 		aviones_lista = crearAviones(lista);
-		 
 		for (String i : aviones_lista.keySet()) {
 				System.out.println("key: " + i + " value: " + aviones_lista.get(i));
-				
-		    }
+		}
+		
+		
+		
+		
+		
+		
 //		aviones_lista.entrySet().forEach(entry->{
 //			if(entry.getValue() > 10) {
 //				System.out.println(entry.getKey() + " " + entry.getValue());  

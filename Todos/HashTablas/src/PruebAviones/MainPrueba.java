@@ -67,11 +67,25 @@ public class MainPrueba {
 			prueba_aviones.add(new Avion(p, inventario.get(p)));
 			
 		}
-        for (Avion avion : prueba_aviones) {
-			System.out.println(avion);
-		}
+//        for (Avion avion : prueba_aviones) {
+//			System.out.println(avion);
+//		}
         
+//		for (Entry<Integer, Integer> entry: inventario.entrySet()) {
+//			int trasl = traslados(entry.getKey(), total16);
+//			users_16.add(new UsuarioBici(entry.getKey(), trasl, (entry.getValue() - trasl)));
+//			System.out.println("Running...");
+//		}
+		
+		
         ////////////////////////////////////////AQui implementar comparator para ordenarlos de mayor a menor.
+        
+        Collections.sort(prueba_aviones);
+        
+        
+        for(int i = 0; i < 15; i++) {
+        	System.out.println(prueba_aviones.get(i));
+        }
         
         
         
@@ -96,16 +110,21 @@ public class MainPrueba {
 	
 	
 	
-	
+	/**
+	 * Añade elementos aun HashMAp de <String> y <Integer> y sumando sus ocurrencias 
+	 * si aparece repetida la clave.
+	 * @param <K>
+	 * @param map
+	 * @param key
+	 */
 	public static <K> void incrementValue(Map <K, Integer> map, K key) {
-		// get value of the specified key
+		//Cogemos el valor
 		Integer count = map.get(key);
-		// if the map contains no mapping for the key, then
-		// map the key with value of 1
+		//si no contiene ese key anteriormente le aplicamos 1.
 		if (count == null) {
 			map.put(key, 1);
 		}
-		// else increment the found value by 1
+		//En caso de que exista le añadimos +1 al valor.
 		else {
 			map.put(key, count + 1);
 		}

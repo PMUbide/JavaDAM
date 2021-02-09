@@ -1,6 +1,8 @@
 package pruebas;
 
-public class UsoBici implements Comparable{
+import java.io.Serializable;
+
+public class UsoBici implements Comparable, Serializable{
 	
 	private int idUsuario;
 	private int estacionRetiro;
