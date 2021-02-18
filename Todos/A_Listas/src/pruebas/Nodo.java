@@ -15,7 +15,7 @@ public class Nodo {
 	public void setSiguiente(Nodo siguiente) {
 		this.siguiente = siguiente;
 	}
-	public Object getContenido() {
+	public int getContenido() {
 		return contenido;
 	}
 	public void setContenido(int contenido) {
