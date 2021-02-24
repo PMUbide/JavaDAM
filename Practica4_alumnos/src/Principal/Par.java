@@ -1,5 +1,6 @@
 package Principal;
 
+
 public class Par {
 	private String nip;
 	private String matricula;
@@ -10,6 +11,17 @@ public class Par {
 	}
 	
 	
+//	public int compareTo(Object miObjeto) {
+//		//Casting, refundición del objeto.
+//		Par otro = (Par) miObjeto;
+//		if((this.matricula) < (otro.matricula)) {
+//			return 1;
+//		}
+//		if((this.total) > (otro.total)) {
+//			return -1;
+//		}
+//		return 0;
+//	}	
 	
 	@Override
 	public String toString() {
