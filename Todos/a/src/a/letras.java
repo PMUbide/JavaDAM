@@ -1,5 +1,6 @@
 package a;
 
+
 public class letras {
 
 	public static void main(String[] args) {
@@ -10,8 +11,6 @@ public class letras {
 		System.out.println("   J    A   V     V   A");
 		System.out.println("   J   A A   V   V   A A");
 						
-		
-		
 		System.out.println(System.currentTimeMillis());
 				
 		int i = 10;

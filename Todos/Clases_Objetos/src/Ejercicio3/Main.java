@@ -23,12 +23,18 @@ public class Main {
 		//Metodo para ordenar objetos de la clase array., estatico, por eso se le llama
 		//Pero hará falta implementar una interfaz, en la clase.
 		
-		Arrays.sort(tienda);
+//		Arrays.sort(tienda);
 		
 		for (Electrodomestico i: tienda) {
 			System.out.printf("Producto nº %d: El precio %.2f con consumo %s, color %s, peso %.0f \n", 
 					i.getId(), i.precioFinal(), i.getConsumo(), i.getColor(), i.getPeso());
 		}
+		
+		for (int i = 0; i < tienda.length; i++) {
+			if(tienda[i] instanceof Lavadora) {
+				System.out.println("Es una lavadora, posicion " + i + " del array");
+			}
+		} 
 		
 		
 		

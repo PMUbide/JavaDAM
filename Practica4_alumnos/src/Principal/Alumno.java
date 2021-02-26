@@ -19,6 +19,11 @@ public class Alumno {
 		return matriculaciones;
 	}
 
+	
+	public void setMatriculaciones(ArrayList<Integer> matriculaciones) {
+		this.matriculaciones = matriculaciones;
+	}
+
 	public void setMatriculaciones(int matricula) {
 		matriculaciones.add(matricula);
 	}
