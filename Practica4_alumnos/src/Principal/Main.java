@@ -314,6 +314,8 @@ public class Main {
 		}
 	}
 	
+	
+	
 	public static void actualizarAlumnos(ArrayList<Alumno> datos_alumnos, ArrayList<Matricula> datos_matriculas) {
 		for (int i = 0; i < datos_alumnos.size(); i++) {
 			ArrayList<Integer> nuevos = new ArrayList<Integer>();
@@ -327,6 +329,8 @@ public class Main {
 			datos_alumnos.get(i).setMatriculaciones(nuevos);
 		}
 	}
+	
+	
 	
 	public static void matriculas(ArrayList<Matricula> matric, ArrayList<Asignaturas> asigna) {
 		System.out.println("-----------Asignaturas y sus alumnos-----------");
@@ -535,6 +539,8 @@ public class Main {
 		}
 		
 	}
+	
+	
 	
 	public static void leerMatriculas(String ruta, ArrayList<Matricula> array) {
 		try {
