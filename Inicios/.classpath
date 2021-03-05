@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="examen"/>
+	<classpathentry kind="src" path="BuclesSencillos"/>
+	<classpathentry kind="src" path="JuegoCalcular"/>
+	<classpathentry kind="src" path="Repaso_bucles"/>
+	<classpathentry kind="src" path="Programar_bucles1"/>
+	<classpathentry kind="src" path="Repaso_primer_eval"/>
+	<classpathentry kind="src" path="Matrices"/>
+	<classpathentry kind="src" path="Tarea_3_Ejercicios"/>
+	<classpathentry kind="src" path="Tarea_5"/>
+	<classpathentry kind="src" path="Tarea10"/>
+	<classpathentry kind="src" path="Tarea11"/>
+	<classpathentry kind="src" path="Tarea6"/>
+	<classpathentry kind="src" path="Tarea7"/>
+	<classpathentry kind="src" path="Tarea8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
