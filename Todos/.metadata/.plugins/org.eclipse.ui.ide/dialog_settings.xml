@@ -19,6 +19,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata"/>
+			<item value="D:\PABLO\APUNTES\DAM\Programacion\Practicas\Practica4_alumnos"/>
 			<item value="D:\PABLO\APUNTES\DAM\Programacion\Inicios"/>
 			<item value="D:\DAMMMM\JavaDAM\Practica4_alumnos"/>
 			<item value="D:\DAMMMM\JavaDAM\Todos\Practica3_bici"/>
@@ -39,7 +41,7 @@
 		<section name="DialogBoundsSettings">
 			<item key="DIALOG_HEIGHT" value="500"/>
 			<item key="DIALOG_WIDTH" value="600"/>
-			<item key="DIALOG_X_ORIGIN" value="391"/>
+			<item key="DIALOG_X_ORIGIN" value="368"/>
 			<item key="DIALOG_Y_ORIGIN" value="39"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>

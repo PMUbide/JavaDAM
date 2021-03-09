@@ -493,3 +493,107 @@
 2021-03-06 19:15:14,863 [Worker-106: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
 2021-03-06 19:15:14,864 [Worker-106: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-03-06 19:15:14,864 [Worker-106: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:32:54,320 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:32:54,320 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:32:54,322 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:32:54,322 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:36:00,565 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:00,565 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:36:00,565 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:00,566 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:36:18,453 [Worker-128: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:18,454 [Worker-128: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:36:18,454 [Worker-128: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:18,454 [Worker-128: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:36:30,209 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:30,209 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:36:30,209 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:30,209 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:36:40,466 [Worker-127: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:40,466 [Worker-127: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:36:40,466 [Worker-127: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:36:40,466 [Worker-127: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:41:13,328 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:41:13,328 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:41:13,329 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:41:13,329 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:41:52,427 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:41:52,428 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:41:52,428 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:41:52,428 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:42:17,073 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:42:17,073 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:42:17,074 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:42:17,074 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:43:09,741 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:43:09,741 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:43:09,741 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:43:09,741 [Worker-118: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:43:30,761 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:43:30,761 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:43:30,762 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:43:30,762 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:47:17,151 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:47:17,151 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:47:17,152 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:47:17,152 [Worker-131: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:47:32,289 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:47:32,289 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:47:32,289 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:47:32,290 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-06 19:53:34,052 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:53:34,053 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-06 19:53:34,053 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-06 19:53:34,053 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:24:33,314 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:24:33,322 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:24:33,324 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:24:33,324 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:26:32,688 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:26:32,688 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:26:32,689 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:26:32,689 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:31:13,813 [Worker-147: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:31:13,814 [Worker-147: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:31:13,814 [Worker-147: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:31:13,815 [Worker-147: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:32:10,146 [Worker-146: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:32:10,146 [Worker-146: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:32:10,147 [Worker-146: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:32:10,147 [Worker-146: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:40:21,191 [Worker-152: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:40:21,191 [Worker-152: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:40:21,192 [Worker-152: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:40:21,192 [Worker-152: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:40:48,951 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:40:48,951 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:40:48,952 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:40:48,952 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:42:03,399 [Worker-147: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:42:03,399 [Worker-147: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:42:03,400 [Worker-147: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:42:03,400 [Worker-147: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 18:42:15,496 [Worker-154: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:42:15,496 [Worker-154: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 18:42:15,498 [Worker-154: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 18:42:15,498 [Worker-154: Launching FinderTests] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 19:01:51,734 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:01:51,734 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 19:01:51,735 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:01:51,735 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 19:06:54,297 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:06:54,297 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 19:06:54,297 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:06:54,297 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 19:07:04,413 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:07:04,413 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 19:07:04,414 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:07:04,414 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 19:10:24,146 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:10:24,146 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 19:10:24,146 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:10:24,147 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources
+2021-03-07 19:10:26,025 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:10:26,025 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\main\resources
+2021-03-07 19:10:26,026 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-03-07 19:10:26,026 [Worker-166: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\PABLO\APUNTES\DAM\Programacion\Todos\java-finder_refactoring-kata\src\test\resources

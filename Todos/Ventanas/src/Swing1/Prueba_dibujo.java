@@ -2,6 +2,7 @@ package Swing1;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
 public class Prueba_dibujo {
@@ -11,15 +12,8 @@ public class Prueba_dibujo {
 		marco.setVisible(true);
 		marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		System.out.println(System.getProperty("java.runtime.version"));
-		int y = 10;
-		comprobar(y);
-	}
-	
-	public static void comprobar(int y) {
 		
 	}
-	
-	
 	
 	
 }
@@ -29,6 +23,9 @@ class MarcoDibujo extends JFrame{
 		setTitle("Prueba de dibujo");
 		setSize(400, 400);
 		LaminaDibujo miLamina = new LaminaDibujo();
+		//miLamina.setBackground(Color.RED);
+		//Color pord efecto.
+		miLamina.setBackground(SystemColor.window);
 		add(miLamina);
 	}
 }
@@ -45,6 +42,23 @@ class LaminaDibujo extends JPanel{
 		//Ahora le mandas un Shape, que hereda de rectangulo.
 		g2.draw(rectangulo);
 		//Ahora dibujar una elipse.
+		Ellipse2D elipse = new Ellipse2D.Double();
+		elipse.setFrame(rectangulo);
+		g2.draw(elipse);
+		//Ver el centro
+		double centroEjeX = rectangulo.getCenterX();
+		double centroEjeY = rectangulo.getCenterY();
+		double radio = 150;
+		//Ahora dibujar un circulo.
+		Ellipse2D circulo = new Ellipse2D.Double();
+		circulo.setFrameFromCenter(centroEjeX, centroEjeY, centroEjeX + radio, centroEjeY + radio);
+		g2.draw(circulo);
+		//Dibujar un color
+		g2.setPaint(Color.cyan);
+		g2.fill(rectangulo);
+		g2.setPaint(Color.GREEN);
+		g2.fill(elipse);
+		
 		
 	}
 }

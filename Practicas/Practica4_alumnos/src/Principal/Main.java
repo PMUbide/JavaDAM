@@ -152,8 +152,9 @@ public class Main {
 	 * @param array
 	 * @param asig
 	 * @param orden
+	 * @throws Exception 
 	 */
-	public static void alumnos(ArrayList<Alumno> array, ArrayList<Asignaturas> asig, String[] orden) {
+	public static void alumnos(ArrayList<Alumno> array, ArrayList<Asignaturas> asig, String[] orden) throws Exception {
 //		Alumnos código [A | N]
 //			Presenta la lista de alumnos matriculados en la asignatura cuyo código es igual al código. Si al final de
 //			la orden se hace constar la letra A el listado de alumnos es presentado en orden alfabético. Si al final

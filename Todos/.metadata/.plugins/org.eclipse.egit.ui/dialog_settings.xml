@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="CommitDialog.authorValues">
+		<item value="PMUbide &lt;75802506+PMUbide@users.noreply.github.com&gt;"/>
 		<item value="PMUbide &lt;pablomartinez92@hotmail.com&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="PMUbide &lt;75802506+PMUbide@users.noreply.github.com&gt;"/>
 		<item value="PMUbide &lt;pablomartinez92@hotmail.com&gt;"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
@@ -14,7 +16,7 @@
 	<section name="GitCommitMessageComponent">
 	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="358"/>
+		<item key="DIALOG_X_ORIGIN" value="302"/>
 		<item key="DIALOG_Y_ORIGIN" value="67"/>
 		<item key="DIALOG_WIDTH" value="666"/>
 		<item key="DIALOG_HEIGHT" value="458"/>

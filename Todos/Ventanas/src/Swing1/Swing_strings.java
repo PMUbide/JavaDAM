@@ -2,6 +2,7 @@ package Swing1;
 
 import javax.swing.*;
 import java.awt.*;
+
 public class Swing_strings {
 
 	public static void main(String[] args) {
@@ -23,6 +24,8 @@ class Marco extends JFrame{
 		//Incluiremos una lámina
 		Lamina miLamina = new Lamina();
 		add(miLamina);
+		
+		//miLamina.setForeground(fg); //Color por defecto de lo que añadamos.
 	}
 }
 
@@ -33,7 +36,15 @@ class Lamina extends JPanel{
 		//Un Overide no del todo.
 		//Que haga lo que haga la super, y luego lo q le digamos nosotros.
 		super.paintComponent(g);
+		g.setFont(new Font("Comic Sans MS", 30, 30));
 		g.drawString("Estamos aprendiendo", 100, 100);
+		g.setColor(Color.BLUE);
 		
+		g.drawString("Asi que no me jodas", 100, 150);
+		//Saber que tipos de letras hay en ese objeto.
+		String [] nombresFuentes = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+		for (String string : nombresFuentes) {
+			System.out.println(string);
+		}
 	}
 }
