@@ -1,8 +1,8 @@
 package Ejercicio2;
 
 public class Boxeador extends Personaje implements Combate{
-	double potenciaPatada; //Potencia 1-100
-	double potenciaPuno; //Potencia 1-100
+	private double potenciaPatada; //Potencia 1-100
+	private double potenciaPuno; //Potencia 1-100
 	
 	public Boxeador(String nombre, int potenciaPatada, int potenciaPuno) {
 		super(nombre);

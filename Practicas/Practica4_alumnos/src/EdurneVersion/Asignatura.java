@@ -9,7 +9,7 @@ public class Asignatura {
 	private int					cuatrimestre; //Cuatrismestre al que pertenece
 	private String				tipo;		//Tipo de asignatura
 	private String				nombre;		//Nombre de la asignatura
-	private ArrayList<Integer>	alumnCurs;		// Para almacenar los id de los alumnos de cada asignatura.
+	private ArrayList<Integer>	alumnCurs;	// Para almacenar los id de los alumnos de cada asignatura.
 
 	/**
 	 * Constructor

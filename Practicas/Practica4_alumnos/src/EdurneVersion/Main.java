@@ -48,8 +48,6 @@ public class Main {
 		System.out.println("Orden>");
 		respuesta = in.nextLine();
 		while (!respuesta.equalsIgnoreCase("fin")) {
-//			System.out.println("Orden>");  // CAMBIADO ABAJO DEL WHILE.
-//			respuesta = in.nextLine();
 			// Casos de uso:
 			if (respuesta.equalsIgnoreCase("Matriculas")) {
 				for (Asignatura i : asignaturas) {
@@ -61,9 +59,6 @@ public class Main {
 			} else {
 				String[] respuestaEspac = respuesta.split(" ");
 				//quitar lo siquiente:
-//				if (respuestaEspac.length == 1) {
-//					System.out.println("Faltan parámetros");
-//				} else 
 				if (respuestaEspac[0].equalsIgnoreCase("asignaturas")) {
 					//done
 					if (respuestaEspac.length == 1) {
@@ -116,6 +111,7 @@ public class Main {
 		in.close();
 	}
 
+	
 	/**
 	 * Método que recibe un ArrayList de alumno para escribir
 	 * La información que va a leer de un .csv. 
@@ -195,16 +191,13 @@ public class Main {
 				while (true) {
 					int idAlumno = f.readInt();
 					int codAsig = f.readInt();
-
 					// Pasamos a lo que corresponda.
 					Matricula matricula1 = new Matricula(idAlumno, codAsig);
 					matriculas.add(matricula1);
 				}
-
 			} catch (EOFException e) {
 			}
 			f.close();
-
 		} catch (FileNotFoundException e) {
 			System.out.println("La ruta para leer mariculas no es correcta.");
 		} catch (IOException e) {
@@ -320,8 +313,7 @@ public class Main {
 			System.out.println("No existe el NIP");
 			return;
 		}
-		int longitud = respuestaEspac.length;
-		if (longitud < 3 || respuestaEspac[2].equalsIgnoreCase("C")) {
+		if (respuestaEspac.length < 3 || respuestaEspac[2].equalsIgnoreCase("C")) {
 			// LLama al metodo de la clase alumno que muestra las asignaturas matriculadas.
 			alumnos.get(index).mostrarAsignaturasCod(asignaturas);
 		} else if (respuestaEspac[2].equalsIgnoreCase("A")) {
@@ -351,8 +343,7 @@ public class Main {
 			System.out.println("No existe el código");
 			return;
 		}
-		int longitud = respuestaEspac.length;
-		if (longitud < 3 || respuestaEspac[2].equalsIgnoreCase("N")) {
+		if (respuestaEspac.length < 3 || respuestaEspac[2].equalsIgnoreCase("N")) {
 			// LLama al método de la clase asignatura que meustra los alumnos por orden nip.
 			asignaturas.get(index).mostrarAlumnosMatriculadosNip(alumnos);
 		} else if (respuestaEspac[2].equalsIgnoreCase("A")) {
@@ -406,7 +397,6 @@ public class Main {
 							+ " ha sido matriculado correctamente en: " + respuestaEspac[i]);
 				}
 			}
-
 		}
 
 	}

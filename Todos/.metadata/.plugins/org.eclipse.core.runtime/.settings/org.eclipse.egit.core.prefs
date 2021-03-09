@@ -1,4 +1,5 @@
-GitRepositoriesView.GitDirectories=D\:\\PABLO\\APUNTES\\DAM\\Programacion\\.git;
-GitRepositoriesView.GitDirectories.relative=D\:\\PABLO\\APUNTES\\DAM\\Programacion\\.git;
-RepositorySearchDialogSearchPath=D\:\\PABLO\\APUNTES\\DAM\\Programacion
+GitRepositoriesView.GitDirectories=D\:\\DAMMMM\\JavaDAM\\.git;
+GitRepositoriesView.GitDirectories.relative=D\:\\DAMMMM\\JavaDAM\\.git;
+RepositorySearchDialogDeepSearch=true
+RepositorySearchDialogSearchPath=D\:\\DAMMMM\\JavaDAM
 eclipse.preferences.version=1

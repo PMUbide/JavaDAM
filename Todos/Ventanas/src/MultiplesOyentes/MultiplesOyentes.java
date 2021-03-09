@@ -27,7 +27,7 @@ public class MultiplesOyentes {
 class MarcoAccion extends JFrame{
 	public MarcoAccion() {
 		setTitle("Prueba acciones");
-		setBounds(600, 350, 600, 300);
+		setBounds(600, 450, 300, 300);
 		PanelAction nueva = new PanelAction();
 		add(nueva);
 	}

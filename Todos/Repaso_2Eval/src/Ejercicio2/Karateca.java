@@ -1,8 +1,8 @@
 package Ejercicio2;
 
 public class Karateca extends Personaje implements Combate{
-	double potenciaPatada; //Potencia 1-100
-	double potenciaPuno; //Potencia 1-100
+	private double potenciaPatada; //Potencia 1-100
+	private double potenciaPuno; //Potencia 1-100
 	
 	public Karateca(String nombre, double potenciaPatada, double potenciaPuno) {
 		super(nombre);

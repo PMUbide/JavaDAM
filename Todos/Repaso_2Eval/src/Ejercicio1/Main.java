@@ -18,7 +18,7 @@ public class Main {
 		matriz[0][0] = 1.5;
 		matriz[0][1] = 1.6;
 		matriz[1][0] = 1.7;
-		matriz[1][1] = 1.8;
+		matriz[1][1] = 2.6;
 		int columna = matriz.length;
 		int fila = matriz[0].length;
 //		System.out.println("fila " + fila + " columna " + columna);
