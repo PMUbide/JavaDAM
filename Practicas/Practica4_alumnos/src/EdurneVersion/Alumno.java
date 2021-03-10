@@ -3,6 +3,7 @@ package EdurneVersion;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class Alumno {
 	private int					nip; 		//El nip del alumno
 	private String				apellido; 	//Apellido del alumno.
@@ -22,6 +23,31 @@ public class Alumno {
 		asignaturasCursadas = new ArrayList<Integer>();
 	}
 
+	/**
+	 * Añade al atributo de las matriculas del alumno una
+	 * nueva matricula.
+	 * @param asig
+	 */
+	public void introducirAsignatura(int asig) {
+		asignaturasCursadas.add(asig);
+	}
+	
+	/**
+	 * Elimina la asignatura que le llega como
+	 * parámetro del arraylist
+	 * @param asig
+	 */
+	public void eliminarAsignatura(int asig) {
+		int index = 0;
+		for (int i = 0; i < asignaturasCursadas.size(); i++) {
+			if(asignaturasCursadas.get(i) == asig) {
+				index = i;
+				break;
+			}
+		}
+		asignaturasCursadas.remove(index);
+	}
+	
 	/**
 	 * Método que recibe un ArrayList de las asignaturas,
 	 * Recorre las asignaturas que tiene el alumno, y si coincide con
@@ -49,7 +75,7 @@ public class Alumno {
 	}
 
 	/**
-	 * * Método que recibe un ArrayList de las asignaturas,
+	 * Método que recibe un ArrayList de las asignaturas,
 	 * Recorre las asignaturas que tiene el alumno, y si coincide con
 	 * alguna de la lista de asignaturas, las muestra por pantalla por orden
 	 * alfabético del nombre.

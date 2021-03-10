@@ -9,7 +9,7 @@ public class Asignatura {
 	private int					cuatrimestre; //Cuatrismestre al que pertenece
 	private String				tipo;		//Tipo de asignatura
 	private String				nombre;		//Nombre de la asignatura
-	private ArrayList<Integer>	alumnCurs;	// Para almacenar los id de los alumnos de cada asignatura.
+	private ArrayList<Integer>	alumnosCursan;	// Para almacenar los id de los alumnos de cada asignatura.
 
 	/**
 	 * Constructor
@@ -25,9 +25,35 @@ public class Asignatura {
 		this.cuatrimestre = cuatrimestre;
 		this.tipo = tipo;
 		this.nombre = nombre;
-		alumnCurs = new ArrayList<Integer>();
+		alumnosCursan = new ArrayList<Integer>();
 	}
 
+	/**
+	 * Añade al ArrayList de los alumnos matriculados un nuevo
+	 * alumno.
+	 * @param nip
+	 */
+	public void introducirAlumno(int nip) {
+		alumnosCursan.add(nip);
+	}
+	
+	/**
+	 * Elimina el alumno que le llega como 
+	 * parámetro del ArrayList de alumnos
+	 * @param nip
+	 */
+	public void eliminarAlumno(int nip) {
+		int index = 0;
+		for (int i = 0; i < alumnosCursan.size(); i++) {
+			if(alumnosCursan.get(i) == nip) {
+				index = i;
+				break;
+			}
+		}
+		alumnosCursan.remove(index);
+	}
+	
+	
 	/**
 	 * Método que recibe un ArrayList de los alumnos,
 	 * Recorre los alumnos que tiene la asignatura, y si coincide con
@@ -37,7 +63,7 @@ public class Asignatura {
 	 */
 	public void mostrarAlumnosMatriculadosNip(ArrayList<Alumno> alumnos) {
 		// Copia del array para no modificar el del objeto.
-		ArrayList<Integer> copyAlumnCurs = this.alumnCurs;
+		ArrayList<Integer> copyAlumnCurs = this.alumnosCursan;
 		if (copyAlumnCurs.size() == 0) {
 			System.out.println("No hay ningún alumno matriculado en la asignatura de " + nombre);
 			return;
@@ -63,7 +89,7 @@ public class Asignatura {
 	 */
 	public void mostrarAlumnosMatriculadosNombre(ArrayList<Alumno> alumnos) {
 		// Copia del array para no modificar el del objeto.
-		ArrayList<Integer> copyAlumnCurs = this.alumnCurs;
+		ArrayList<Integer> copyAlumnCurs = this.alumnosCursan;
 		ArrayList<String> nombres = new ArrayList<String>();
 		if (copyAlumnCurs.size() == 0) {
 			System.out.println("No hay ningún alumno matriculado en la asignatura de " + nombre);
@@ -99,7 +125,7 @@ public class Asignatura {
 	 * @return
 	 */
 	public ArrayList<Integer> getAlumnCurs() {
-		return alumnCurs;
+		return alumnosCursan;
 	}
 
 	/**
@@ -107,7 +133,7 @@ public class Asignatura {
 	 * @param alumnCurs -> Recibe un ArraList<Integer>
 	 */
 	public void setAlumnCurs(ArrayList<Integer> alumnCurs) {
-		this.alumnCurs = alumnCurs;
+		this.alumnosCursan = alumnCurs;
 	}
 
 	/**

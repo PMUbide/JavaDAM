@@ -7,8 +7,6 @@ public interface maquinas {
 	boolean encender(boolean boton);
 		
 	
-
-	
 	
 	
 }

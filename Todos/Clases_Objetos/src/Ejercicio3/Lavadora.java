@@ -19,12 +19,17 @@ public class Lavadora extends Electrodomestico{
 		// TODO Auto-generated constructor stub
 		this.carga = 5;
 	}
+	
 	public double precioFinal() {
-		double precio = super.precioFinal();
+//		double precio = super.precioFinal();
+//		if (this.carga > 30) {
+//			precio += 50;
+//		}
+//		return precio;
 		if (this.carga > 30) {
-			precio += 50;
+			precioBase += 50;
 		}
-		return precio;
+		return precioBase;
 	}
 	
 	public void setCarga(int carga) {

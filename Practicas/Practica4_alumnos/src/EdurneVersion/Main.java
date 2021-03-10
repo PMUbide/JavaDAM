@@ -9,7 +9,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -19,6 +18,7 @@ public class Main {
 		// Creo el ArrayList de Alumno.
 		ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
 		leerFicheroAlumnos_csv(alumnos, "files/alumnos.csv");
+		//Codigo debugger para visualizar los alumnos del fichero.
 //		for (Alumno a : alumnos) {
 //			System.out.println(a.toString());
 //		}
@@ -26,6 +26,7 @@ public class Main {
 		// Creo el ArrayList de Asignatura.
 		ArrayList<Asignatura> asignaturas = new ArrayList<Asignatura>();
 		leerFicheroAsignaturas_txt(asignaturas, "files/asignaturas.txt");
+		//Codigo debugger para visualizar las asignaturas del fichero.
 //		for (Asignatura as : asignaturas) {
 //			System.out.println(as.toString());
 //		}
@@ -34,6 +35,7 @@ public class Main {
 		ArrayList<Matricula> matriculas = new ArrayList<Matricula>();
 		String rutaMatriculas = "files/matriculas.dat";
 		leerFicheroMatriculas_dat(matriculas, rutaMatriculas);
+		//Codigo debugger para visualizar las matriculas del fichero.
 //		for (Matricula an : matriculas) {
 //			System.out.println(an.toString());
 //		}
@@ -58,36 +60,40 @@ public class Main {
 				actualizarArchivoMatriculas(matriculas, rutaMatriculas);
 			} else {
 				String[] respuestaEspac = respuesta.split(" ");
-				//quitar lo siquiente:
 				if (respuestaEspac[0].equalsIgnoreCase("asignaturas")) {
-					//done
+					//LLama al método de mostrar las asignaturas del alumno si le llega 
+					//más de un parámetro.
 					if (respuestaEspac.length == 1) {
 						System.out.println("Debe indicar el nip.");
 					}else {
 						mostrarAsignaturasDeAlumno(respuestaEspac, alumnos, asignaturas);
 					}
 				} else if (respuestaEspac[0].equalsIgnoreCase("alumnos")) {
-					//done
+					//LLama al método de mostrar los alumnos de una asignatura si le llega 
+					//más de un parámetro.
 					if (respuestaEspac.length == 1) {
 						System.out.println("Debe indicar el Cod Asignatura.");
 					}else {
 						mostrarAlumnosDeAsignatura(respuestaEspac, alumnos, asignaturas);
 					}
 				} else if (respuestaEspac[0].equalsIgnoreCase("matricular")) {
-					//done
+					//LLama al método de matricular una asignatura nueva a un alumno si le llega 
+					//más de un parámetro.
 					if (respuestaEspac.length == 1) {
 						System.out.println("Debe indicar el NIP para matricular.");
 					}else {
 						matricularAsignatura(respuestaEspac, alumnos, asignaturas, matriculas);
 					}
 				} else if (respuestaEspac[0].equalsIgnoreCase("eliminar")) {
-					//done
+					//LLama al método de eliminar una asignatura a un alumno si le llega 
+					//más de un parámetro.
 					if (respuestaEspac.length == 1) {
 						System.out.println("Debe indicar el nip.");
 					}else {
 						eliminarAsignatura(respuestaEspac, alumnos, asignaturas, matriculas, in);
 					}
 				} else {
+					//Si no coindice con ningun caso de uso:
 					System.out.println("Se desconoce la orden introducida.");
 				}
 			}
@@ -143,6 +149,7 @@ public class Main {
 		}
 	}
 
+	
 	/**
 	 * Método que recibe un ArrayList de asignaturas para escribir
 	 * La información que va a leer de un .txt. 
@@ -159,7 +166,6 @@ public class Main {
 				// Hacemos el split.
 				String[] separado = linea.split(" ");
 				// Almacenamos en la posición 4 las varias palabras del nombre de la asignatura.
-				// System.out.println(linea.length());
 				String nombre = separado[4];
 				for (int i = 5; i < separado.length; i++) {
 					nombre = nombre + " " + separado[i];
@@ -379,7 +385,8 @@ public class Main {
 		//Recorre las posiciones del split del comando introducido.
 		for (int i = 2; i < respuestaEspac.length; i++) {
 			//Si el metodo deuelve -1 es que no existe la asignatura que está intentando matricular.
-			if (comprobarExistenciaAsignatura(asignaturas, respuestaEspac[i]) == -1) {
+			int index_asignatura = comprobarExistenciaAsignatura(asignaturas, respuestaEspac[i]);
+			if (index_asignatura == -1) {
 				System.out.println("El código " + respuestaEspac[i] + " no corresponde a ninguna asignatura.");
 			} else {
 				//Comprueba con el método si ese alumno ya está matriculado de esa que se pretende añadir.
@@ -390,11 +397,12 @@ public class Main {
 					//Añade al ArrayList de matriculas una nueva matricula
 					//con los parámetros introducidos por el usuario.
 					matriculas.add(new Matricula(alumnos.get(index).getNip(), Integer.parseInt(respuestaEspac[i])));
-					//A continuación llamamos al método de actualizar las clases.
-					actualizarAlumnos(alumnos, matriculas);
-					actualizarAsignaturas(asignaturas, matriculas);
-					System.out.println("El alumno: " + alumnos.get(index).getNombre()
-							+ " ha sido matriculado correctamente en: " + respuestaEspac[i]);
+					//A continuación llamamos a los métodos de actualizan las matriculas.
+					alumnos.get(index).introducirAsignatura(Integer.parseInt(respuestaEspac[i]));
+					asignaturas.get(index_asignatura).introducirAlumno(alumnos.get(index).getNip());
+					//Mostramos por pantalla
+					System.out.println("El alumno: " + alumnos.get(index).getNombre() + " " + alumnos.get(index).getApellido()
+							+ " ha sido matriculado correctamente en: " + respuestaEspac[i] + " - " + asignaturas.get(index_asignatura).getNombre());
 				}
 			}
 		}
@@ -440,7 +448,8 @@ public class Main {
 				}
 				System.out.println("Un total de " + numEliminadas + " matrículas han sido eliminadas");
 				//Se actualizan los datos de nuestros ArrayList principales con la información.
-				actualizarAlumnos(alumnos, matriculas);
+				//Al alumno se le pone a 0 el arrayList de  las asignaturas matriculadas.
+				alumnos.get(index).setAsignaturas(new ArrayList<Integer>());
 				actualizarAsignaturas(asignaturas, matriculas);
 			}
 			// Si elige "n", u otra cosa no sucede nada.
@@ -448,7 +457,8 @@ public class Main {
 			//Se recorre para cada elemento de la linea introducida por el usuario
 			for (int i = 2; i < respuestaEspac.length; i++) {
 				//Primero se comprueba si no existe el codigo introducido.
-				if (comprobarExistenciaAsignatura(asignaturas, respuestaEspac[i]) == -1) {
+				int index_asignatura = comprobarExistenciaAsignatura(asignaturas, respuestaEspac[i]);
+				if (index_asignatura == -1) {
 					System.out.println("El código de la asignatura no existe");
 				} else {
 					//Se comprueba si existe la matriculacion para poder eliminarla.
@@ -462,8 +472,8 @@ public class Main {
 								.println("La matrícula: " + respuestaEspac[i] + " ha sido eliminado correctamente de: "
 										+ alumnos.get(index).getNombre() + " " + alumnos.get(index).getApellido());
 						//Actualiza los datos de nuestros ArrayList de información.
-						actualizarAlumnos(alumnos, matriculas);
-						actualizarAsignaturas(asignaturas, matriculas);
+						alumnos.get(index).eliminarAsignatura(Integer.parseInt(respuestaEspac[i]));
+						asignaturas.get(index_asignatura).eliminarAlumno(alumnos.get(index).getNip());
 					}
 				}
 			}
@@ -530,12 +540,12 @@ public class Main {
 	 * @param matriculas -> ArrayList donde tenemos la información de matriculas.
 	 * @param alumnos -> ArrayList con los alumnos.
 	 * @param comando -> Comando introducido por el usuario, Debe ser un CODIGO asignatura.
-	 * @param nip -> NIP que se está comparando que ya le llega como int
+	 * @param indexAlumno -> NIP que se está comparando que ya le llega como int
 	 * @return Si existe la matriculacion, devuelve la posición en el ArrayList.
 	 * Si no existe duvuelve -1. 
 	 */
 	public static int comprobarMatricula(ArrayList<Matricula> matriculas, ArrayList<Alumno> alumnos, String comando,
-			int nip) {
+			int indexAlumno) {
 		//Se gestiona con un try-catch que ha introducido un codigo.
 		int codAsignatura;
 		try {
@@ -548,7 +558,7 @@ public class Main {
 			// Comprueba si el alumno ya está matriculado en la asignatura.
 			//con los dos parámetros NIP && COD
 			if ((matriculas.get(i).getCodAsig() == codAsignatura)
-					&& (matriculas.get(i).getIdAlumno() == alumnos.get(nip).getNip())) {
+					&& (matriculas.get(i).getIdAlumno() == alumnos.get(indexAlumno).getNip())) {
 				return i;
 			}
 		}

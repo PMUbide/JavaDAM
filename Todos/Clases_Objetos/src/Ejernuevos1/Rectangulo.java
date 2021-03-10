@@ -8,10 +8,15 @@ public class Rectangulo {
 		this.b = b;
 		this.h = h;
 	}
+	
 
 	public Rectangulo() {
-
+		b = 15;
+		h = 10;
 	}
+	
+	
+	
 
 	public double perimetro() {
 		return (b * 2) + (h * 2);
