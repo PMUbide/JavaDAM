@@ -1,17 +1,17 @@
-package EdurneVersion;
+package Practica4;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 public class Alumno {
-	private int					nip; 		//El nip del alumno
-	private String				apellido; 	//Apellido del alumno.
-	private String				nombre; 	//Nombre del alumno
-	private ArrayList<Integer>	asignaturasCursadas; //Asignaturas que cursa.
+	private int					nip;					// El nip del alumno
+	private String				apellido;				// Apellido del alumno.
+	private String				nombre;					// Nombre del alumno
+	private ArrayList<Integer>	asignaturasCursadas;	// Asignaturas que cursa.
 
 	/**
 	 * Constructor
+	 * 
 	 * @param nip
 	 * @param apellido
 	 * @param nombre
@@ -24,46 +24,46 @@ public class Alumno {
 	}
 
 	/**
-	 * Añade al atributo de las matriculas del alumno una
-	 * nueva matricula.
+	 * Añade al atributo de las matriculas del alumno una nueva matrícula.
+	 * 
 	 * @param asig
 	 */
 	public void introducirAsignatura(int asig) {
 		asignaturasCursadas.add(asig);
 	}
-	
+
 	/**
-	 * Elimina la asignatura que le llega como
-	 * parámetro del arraylist
+	 * Elimina la asignatura que le llega como parámetro del arraylist
+	 * 
 	 * @param asig
 	 */
 	public void eliminarAsignatura(int asig) {
 		int index = 0;
 		for (int i = 0; i < asignaturasCursadas.size(); i++) {
-			if(asignaturasCursadas.get(i) == asig) {
+			if (asignaturasCursadas.get(i) == asig) {
 				index = i;
 				break;
 			}
 		}
 		asignaturasCursadas.remove(index);
 	}
-	
+
 	/**
-	 * Método que recibe un ArrayList de las asignaturas,
-	 * Recorre las asignaturas que tiene el alumno, y si coincide con
-	 * alguna de la lista de asignaturas, las muestra por pantalla con orden
-	 * del código.
+	 * Método que recibe un ArrayList de las asignaturas. Recorre las asignaturas
+	 * que tiene el alumno, y si coincide con alguna de la lista de asignaturas, las
+	 * muestra por pantalla con orden del código.
+	 * 
 	 * @param asignaturas
 	 */
 	public void mostrarAsignaturasCod(ArrayList<Asignatura> asignaturas) {
 		// Copia del array para no modificar el del objeto.
 		ArrayList<Integer> matriculas = asignaturasCursadas;
-		//Si no tiene ninguna:
+		// Si no tiene ninguna:
 		if (matriculas.size() == 0) {
 			System.out.println("No está matriculado/a en ninguna asignatura");
 			return;
 		}
-		//Ordena el array por los codigos int.
+		// Ordena el array por los codigos int.
 		Collections.sort(matriculas);
 		for (int i = 0; i < matriculas.size(); i++) {
 			for (int j = 0; j < asignaturas.size(); j++) {
@@ -75,10 +75,10 @@ public class Alumno {
 	}
 
 	/**
-	 * Método que recibe un ArrayList de las asignaturas,
-	 * Recorre las asignaturas que tiene el alumno, y si coincide con
-	 * alguna de la lista de asignaturas, las muestra por pantalla por orden
-	 * alfabético del nombre.
+	 * Método que recibe un ArrayList de las asignaturas, Recorre las asignaturas
+	 * que tiene el alumno, y si coincide con alguna de la lista de asignaturas, las
+	 * muestra por pantalla por orden alfabético del nombre.
+	 * 
 	 * @param asignaturas
 	 */
 	public void mostrarAsignaturasNombre(ArrayList<Asignatura> asignaturas) {
@@ -114,6 +114,7 @@ public class Alumno {
 
 	/**
 	 * Getter del arraylist de asignaturas.
+	 * 
 	 * @return
 	 */
 	public ArrayList<Integer> getAsignaturas() {
@@ -122,6 +123,7 @@ public class Alumno {
 
 	/**
 	 * Setter del arraylist de asignaturas
+	 * 
 	 * @param asignaturas
 	 */
 	public void setAsignaturas(ArrayList<Integer> asignaturas) {
@@ -130,6 +132,7 @@ public class Alumno {
 
 	/**
 	 * Getter del nip.
+	 * 
 	 * @return
 	 */
 	public int getNip() {
@@ -138,6 +141,7 @@ public class Alumno {
 
 	/**
 	 * Setter del nip
+	 * 
 	 * @param nip
 	 */
 	public void setNip(int nip) {
@@ -146,6 +150,7 @@ public class Alumno {
 
 	/**
 	 * Getter de los apellidos
+	 * 
 	 * @return
 	 */
 	public String getApellido() {
@@ -154,6 +159,7 @@ public class Alumno {
 
 	/**
 	 * Setter del apellido.
+	 * 
 	 * @param apellido
 	 */
 	public void setApellido(String apellido) {
@@ -162,6 +168,7 @@ public class Alumno {
 
 	/**
 	 * Getter del nombre.
+	 * 
 	 * @return
 	 */
 	public String getNombre() {
@@ -170,12 +177,11 @@ public class Alumno {
 
 	/**
 	 * Setter del nombre
+	 * 
 	 * @param nombre
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	
 
 }

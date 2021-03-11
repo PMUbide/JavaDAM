@@ -1,8 +1,8 @@
-package EdurneVersion;
+package Practica4;
 
 public class Matricula {
-	private int idAlumno; 
-	private int codAsig;
+	private int idAlumno; //El id del alumno
+	private int codAsig;  //El código de asignatura.
 	
 	/**
 	 * Constructor
