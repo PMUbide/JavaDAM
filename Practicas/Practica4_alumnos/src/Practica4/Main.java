@@ -101,7 +101,7 @@ public class Main {
 			System.out.println("Orden>");
 			respuesta = in.nextLine();
 		}
-		// Cuando finaliza actualiza el archivo binario automáticamente.
+		//Cuando finaliza actualiza el archivo binario automáticamente.
 		actualizarArchivoMatriculas(matriculas, rutaMatriculas);
 		System.out.println("Has finalizado el programa.");
 		System.out.println("¿Mostrar resumen de alumnos? (s/n)");

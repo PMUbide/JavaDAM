@@ -48,7 +48,7 @@ public class Main {
 		l.anadirNodo(666, 3);
 		visualizarLista(l);
 		System.out.println("-------BUSCAR-----------");
-		Nodo busqueda = l.buscarNodo(22);
+		Nodo busqueda = l.buscarNodo(30);
 		if (busqueda != null) {
 			System.out.println( "El contenido de busqueda es " + busqueda.getContenido());
 		}
