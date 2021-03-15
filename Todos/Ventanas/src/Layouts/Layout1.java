@@ -1,5 +1,6 @@
 package Layouts;
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.SystemColor;
@@ -21,6 +22,7 @@ public class Layout1 {
 }
 
 class Marco extends JFrame{
+	
 	public Marco(){
 		setTitle("Prueba de layout");
 		setSize(400, 400);
@@ -30,19 +32,27 @@ class Marco extends JFrame{
 		miLamina.setBackground(SystemColor.window);
 //		FlowLayout layaout = new FlowLayout(FlowLayout.LEFT);
 //		miLamina.setLayout(new FlowLayout(FlowLayout.LEFT));
-		miLamina.setLayout(new FlowLayout(FlowLayout.LEFT, 75, 100));
+		//miLamina.setLayout(new FlowLayout(FlowLayout.LEFT, 75, 100));
 		
 		
-		add(new Jpanel());
+		add(miLamina);
 	}
+	
 }
 
 
 class Lamina extends JPanel{
 	
 	public Lamina() {
-		add(new JButton("EA"));
+		
+		//Poner el layout
+		setLayout(new BorderLayout());
+		//ahroa posicion de los componentes.
+		add(new JButton("EA"), BorderLayout.NORTH);
+		add(new JButton("este"),BorderLayout.EAST);
+		add(new JButton("oeste"),BorderLayout.WEST);
 		add(new JButton("NOO"));
+		
 	}
 	
 	public void paintComponent(Graphics g) {
