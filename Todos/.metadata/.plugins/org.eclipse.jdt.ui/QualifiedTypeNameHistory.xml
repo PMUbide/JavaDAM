@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
     <fullyQualifiedTypeName name="java.awt.Dimension"/>
     <fullyQualifiedTypeName name="Swing1.LaminaDibujo"/>
     <fullyQualifiedTypeName name="java.awt.geom.Rectangle2D"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="Pilas.Pila"/>
     <fullyQualifiedTypeName name="EnlazadasDobles.ListaDoble"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

@@ -58,6 +58,30 @@ public class Principal {
 			}
 		}
 		
+		
+		System.out.println("Relog prueba: ");
+		int hora = 0;
+		int  minuto = 0;
+		int segundo = 0;
+		for (int i = 0; i < 24; i++) {
+			for (int j = 0; j < 60; j++) {
+				segundo = 0;
+				for (int j2 = 0; j2 < 60; j2++) {
+					try {
+						Thread.sleep(1000L);
+						segundo++;
+						System.out.println("Hora: " + hora + " minuto " + minuto + " segundos " + segundo);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}   
+				}
+				minuto++;
+			}
+			hora++;
+		}
+		
+		
 	}
 	
 	
