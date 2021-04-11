@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="Swing1.LaminaDibujo"/>
     <fullyQualifiedTypeName name="java.awt.geom.Rectangle2D"/>
     <fullyQualifiedTypeName name="java.awt.geom.Rectangle2D.Double"/>
-    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
     <fullyQualifiedTypeName name="java.awt.geom.Ellipse2D"/>
     <fullyQualifiedTypeName name="java.awt.geom.Ellipse2D.Double"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
@@ -21,7 +20,6 @@
     <fullyQualifiedTypeName name="Eventos1.MarcoMouse"/>
     <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
     <fullyQualifiedTypeName name="Eventos1.LaminaMouse"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
     <fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
     <fullyQualifiedTypeName name="java.awt.GraphicsEnvironment"/>
@@ -58,6 +56,8 @@
     <fullyQualifiedTypeName name="pruebas2.ListaEnlazadaCircular"/>
     <fullyQualifiedTypeName name="Pilas.Pila"/>
     <fullyQualifiedTypeName name="EnlazadasDobles.ListaDoble"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
