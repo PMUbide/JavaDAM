@@ -1,0 +1,10 @@
+INSERT INTO `usuario` (`nombre`, `apellidos`, `telefono`, `ciudad`, `bicicleta`, `edad`, `sexo`, `foto`, `usuario`, `contrasena`) VALUES ('Jorge', 'Ruiz', '655131123', "Zaragoza", 27, NULL, 1, NULL, 'gorronegra', 'canada95') ;
+
+
+
+INSERT INTO `ruta` (`nombre`, `inicio`, `final`, `idUser`, `descripcion`, `urlMap`) VALUES ("Ruta por droga", 'Puerta Salesianos', "Principio del pueblo", 1, "Ta guapa kio, pero estoy hasta el coño de la bici", "https://www.google.com/maps/dir/41.6449558,-0.9036664/41.5432246,-0.9949279/@41.5945323,-0.9874811,11.5z/data=!4m4!4m3!2m1!3b1!3e1") 
+
+INSERT INTO `grupo` ( `fechaSalida`, `idRuta`, `aforoMax`, `apuntados`, `completo`, `fechaCreacion`) VALUES ('2018-12-31 09:00:00', '1', 4, 0, false, "2018-12-30 18:00:00")  
+
+
+INSERT INTO `usuario_grupo` (`idGrupo`, `idUser`) VALUES ('1', '5'), ('1', '4');

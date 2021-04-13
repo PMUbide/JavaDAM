@@ -19,6 +19,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\DAMMMM\JavaDAM\proyectoMARCAS\tutorial"/>
+			<item value="D:\DAMMMM\JavaDAM\Practicas\Practica5_club"/>
 			<item value="D:\PABLO\APUNTES\DAM\Programacion\Practicas"/>
 			<item value="D:\PABLO\APUNTES\DAM\Programacion\Inicios\JuegoCalcular"/>
 			<item value="D:\DAMMMM\JavaDAM\Practicas"/>

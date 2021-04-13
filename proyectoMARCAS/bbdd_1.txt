@@ -1,0 +1,82 @@
+
+        
+CREATE TABLE grupo
+(
+  idGrupo       INT      NOT NULL AUTO_INCREMENT,
+  fechaSalida   DATETIME NOT NULL,
+  idRuta        INT      NOT NULL,
+  aforoMax      INT      NULL    ,
+  apuntados     INT      NULL    ,
+  completo      BOOLEAN  NULL    ,
+  fechaCreacion DATETIME NULL    ,
+  PRIMARY KEY (idGrupo)
+);
+
+ALTER TABLE grupo
+  ADD CONSTRAINT UQ_idGrupo UNIQUE (idGrupo);
+
+CREATE TABLE ruta
+(
+  idRuta      INT           NOT NULL AUTO_INCREMENT,
+  nombre      VARCHAR(50)   NOT NULL,
+  inicio      VARCHAR(50)   NULL    ,
+  final       VARCHAR(50)   NULL    ,
+  idUser      INT           NULL    ,
+  descripcion VARCHAR(1000) NULL    ,
+  urlMap      VARCHAR(1000) NULL    ,
+  PRIMARY KEY (idRuta)
+);
+
+ALTER TABLE ruta
+  ADD CONSTRAINT UQ_idRuta UNIQUE (idRuta);
+
+ALTER TABLE ruta
+  ADD CONSTRAINT UQ_nombre UNIQUE (nombre);
+
+CREATE TABLE usuario
+(
+  idUser     INT         NOT NULL AUTO_INCREMENT,
+  nombre     VARCHAR(50) NOT NULL,
+  apellidos  VARCHAR(50) NOT NULL,
+  telefono   VARCHAR(15) NOT NULL,
+  ciudad     VARCHAR(50) NULL    ,
+  bicicleta  VARCHAR(50) NULL    ,
+  edad       TINYINT     NULL    ,
+  sexo       VARCHAR(1)  NULL    ,
+  foto       LONGBLOB    NULL    ,
+  usuario    VARCHAR(50) NOT NULL,
+  contrasena VARCHAR(50) NOT NULL,
+  PRIMARY KEY (idUser)
+);
+
+ALTER TABLE usuario
+  ADD CONSTRAINT UQ_idUser UNIQUE (idUser);
+
+ALTER TABLE usuario
+  ADD CONSTRAINT UQ_usuario UNIQUE (usuario);
+
+CREATE TABLE usuario_grupo
+(
+  idGrupo INT NOT NULL,
+  idUser  INT NOT NULL
+);
+
+ALTER TABLE usuario_grupo
+  ADD CONSTRAINT FK_grupo_TO_usuario_grupo
+    FOREIGN KEY (idGrupo)
+    REFERENCES grupo (idGrupo);
+
+ALTER TABLE usuario_grupo
+  ADD CONSTRAINT FK_usuario_TO_usuario_grupo
+    FOREIGN KEY (idUser)
+    REFERENCES usuario (idUser);
+
+ALTER TABLE ruta
+  ADD CONSTRAINT FK_usuario_TO_ruta
+    FOREIGN KEY (idUser)
+    REFERENCES usuario (idUser);
+
+ALTER TABLE grupo
+  ADD CONSTRAINT FK_ruta_TO_grupo
+    FOREIGN KEY (idRuta)
+    REFERENCES ruta (idRuta);
