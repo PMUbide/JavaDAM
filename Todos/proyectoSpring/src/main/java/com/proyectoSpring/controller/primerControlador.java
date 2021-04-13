@@ -7,10 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.proyectoSpring.model.Usuario;
 import com.proyectoSpring.service.IUsuarioService;
@@ -31,7 +28,7 @@ public class primerControlador {
         System.out.println("usuarios size = " + usuarios.size());
         System.out.println(usuarios.get(2).getNombre());
         for(int i = 0; i < usuarios.size(); i++) {
-        	System.out.println(usuarios.get(i).getIdUser() + " - " + usuarios.get(i).getNombre());
+        	System.out.println(usuarios.get(i).getIdUser() + " - " + usuarios.get(i).getNombre() + " - ");
         }
         // Envía los alumnos al html, para poder listarlos
         model.addAttribute("usuarios", usuarios);
@@ -39,7 +36,7 @@ public class primerControlador {
     }
 	
     @PostMapping(value = "/usuarios/agregar")
-    public String agregarAlumno(@ModelAttribute  Usuario usuario, Model model) {
+    public String agregarAlumno(@ModelAttribute Usuario usuario, Model model) {
     	// Ejecuta la query "insert alumno"
     	System.out.println("ESTOY ANTES DE USUARIO SERVICE");
         usuarioService.addUsuario(usuario);

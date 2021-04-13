@@ -23,12 +23,12 @@ import org.hibernate.annotations.GenericGenerator;
 public class Usuario implements Serializable {
 	// Esta línea tiene que estar pero no nos interesa, se autogenera cuando
 	// implementamos Serializable
-//	private static final long	serialVersionUID	= 3233149207833106460L;
+	private static final long	serialVersionUID	= 3233149207833106460L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id_user")
-	private int				idUser;
+	private int					idUser;
 
 	@Column(name = "nombre")
 	private String				nombre;
@@ -54,8 +54,8 @@ public class Usuario implements Serializable {
 	@Column(name = "foto")
 	private String				foto;
 
-	@Column(name = "usuario")
-	private String				usuario;
+	@Column(name = "nick")
+	private String				nick;
 
 	@Column(name = "contrasena")
 	private String				contrasena;
@@ -64,9 +64,8 @@ public class Usuario implements Serializable {
 
 	}
 
-	public Usuario(int idUser, String nombre, String apellidos, String telefono, String ciudad, String bicicleta,
+	public Usuario(String nombre, String apellidos, String telefono, String ciudad, String bicicleta,
 			int edad, String sexo, String foto, String usuario, String contrasena) {
-		this.idUser = idUser;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.telefono = telefono;
@@ -75,11 +74,11 @@ public class Usuario implements Serializable {
 		this.edad = edad;
 		this.sexo = sexo;
 		this.foto = foto;
-		this.usuario = usuario;
+		this.nick = usuario;
 		this.contrasena = contrasena;
 	}
 
-	public long getIdUser() {
+	public int getIdUser() {
 		return idUser;
 	}
 
@@ -151,12 +150,12 @@ public class Usuario implements Serializable {
 		this.foto = foto;
 	}
 
-	public String getUsuario() {
-		return usuario;
+	public String getNick() {
+		return nick;
 	}
 
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 
 	public String getContrasena() {
@@ -167,4 +166,13 @@ public class Usuario implements Serializable {
 		this.contrasena = contrasena;
 	}
 
+	@Override
+	public String toString() {
+		return "Usuario [idUser=" + idUser + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telefono="
+				+ telefono + ", ciudad=" + ciudad + ", bicicleta=" + bicicleta + ", edad=" + edad + ", sexo=" + sexo
+				+ ", foto=" + foto + ", nick=" + nick + ", contrasena=" + contrasena + "]";
+	}
+
+	
+	
 }
