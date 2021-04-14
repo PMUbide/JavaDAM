@@ -19,7 +19,12 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+<<<<<<< HEAD
 			<item value="D:\DAMMMM\JavaDAM\Todos\proyectoSpring"/>
+=======
+			<item value="D:\PABLO\APUNTES\DAM\Programacion\proyectoMARCAS\tutorial"/>
+			<item value="D:\PABLO\APUNTES\DAM\Programacion\Todos\proyectoSpring"/>
+>>>>>>> 47cd4e42ad301e71a119d1d1d4ce4c1dd44c0da2
 			<item value="D:\DAMMMM\JavaDAM\proyectoMARCAS\tutorial"/>
 			<item value="D:\DAMMMM\JavaDAM\Practicas\Practica5_club"/>
 			<item value="D:\PABLO\APUNTES\DAM\Programacion\Practicas"/>

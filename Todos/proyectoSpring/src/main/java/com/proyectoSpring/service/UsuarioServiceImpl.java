@@ -42,6 +42,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
 			 * ¡Investiga qué consultas se pueden hacer de manera sencilla!
 			 */
 			System.out.println("VOLANDO VOY");
+			System.out.println(usuario.toString());
 			repository.save(usuario);
 			return true;
 		} catch(Exception e) {

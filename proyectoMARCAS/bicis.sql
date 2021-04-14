@@ -36,7 +36,7 @@ CREATE TABLE `grupo` (
   `apuntados` int(11) DEFAULT NULL,
   `completo` tinyint(1) DEFAULT NULL,
   `fechaCreacion` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Volcado de datos para la tabla `grupo`
@@ -60,7 +60,7 @@ CREATE TABLE `ruta` (
   `idUser` int(11) DEFAULT NULL,
   `descripcion` varchar(1000) DEFAULT NULL,
   `urlMap` varchar(1000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Volcado de datos para la tabla `ruta`
@@ -88,7 +88,7 @@ CREATE TABLE `usuario` (
   `foto` longblob,
   `usuario` varchar(50) NOT NULL,
   `contrasena` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -110,7 +110,7 @@ INSERT INTO `usuario` (`idUser`, `nombre`, `apellidos`, `telefono`, `ciudad`, `b
 CREATE TABLE `usuario_grupo` (
   `idGrupo` int(11) NOT NULL,
   `idUser` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ;
 
 --
 -- Volcado de datos para la tabla `usuario_grupo`

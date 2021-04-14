@@ -25,12 +25,15 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
+                <th>Apellidos</th>
                 <th>Usuario</th>
             </tr>
             <tr th:each="usuario : ${usuarios}">
                 <td th:text="${usuario.idUser}"></td>
                 <td th:text="${usuario.nombre}"></td>
-                <td th:text="${usuario.usuario}"></td>
+                <td th:text="${usuario.apellidos}"></td>
+                <td th:text="${usuario.nick}"></td>
+               <td th:text="${usuario.ciudad}"></td>
             </tr>
         </table>
     </div>
@@ -40,45 +43,52 @@
     <form th:object="${usuario}" th:action="@{/usuarios/agregar}" method="post">
         <div>
             <label for="nombre">Nombre</label>
-            <input th:field="*{nombre}" id="nombre" name="nombre" placeholder="Escribe el nombre " type="text">
+            <input field="*{nombre}" id="nombre" name="nombre" placeholder="Escribe el nombre " type="text">
         </div>
         <div>
-            <label for="apellidos">Apellido</label>
-            <input th:field="*{apellidos}" id="apellido" name="apellido" placeholder="Escribe el apellido" type="text">
+            <label for="apellidos">Apellidos</label>
+            <input field="*{apellidos}" id="apellidos" name="apellidos" placeholder="Escribe el apellido" type="text">
         </div>
         <div>
             <label for="ciudad">Ciudad</label>
-            <input th:field="*{ciudad}" id="ciudad" name="ciudad" placeholder="Escribe la ciudad" type="text">
+            <input field="*{ciudad}" id="ciudad" name="ciudad" placeholder="Escribe la ciudad" type="text">
         </div>
         <div>
             <label for="bicicleta">Bicicleta</label>
-            <input th:field="*{bicicleta}" id="bicicleta" name="bicicleta" placeholder="Escribe la bicicleta" type="text">
+            <input field="*{bicicleta}" id="bicicleta" name="bicicleta" placeholder="Escribe la bicicleta" type="text">
         </div>
         <div>
             <label for="telefono">Teléfono</label>
-            <input th:field="*{telefono}" id="telefono" name="telefono" placeholder="Escribe el telefono" type="text">
+            <input field="*{telefono}" id="telefono" name="telefono" placeholder="Escribe el telefono" type="text">
         </div>
-       
+
+        <p>Selecciona tu sexo</p>
         <div>
-            <label for="sexo">Masculino</label>
-            <input th:field="*{sexo}" id="sexo" name="sexo" placeholder="Escribe el sexo" type="text">
+            <input field="*{sexo}" type="radio" id="masculino" name="sexo" value="1" checked>
+            <label for="masculino">Masculino</label>
         </div>
 
         <div>
+            <input field="*{sexo}" type="radio" id="femenino" name="sexo" value="2">
+            <label for="femenino">Femenino</label>
+        </div>
+		
+		 
+        <div>
             <label for="edad">Edad</label>
-            <input th:field="*{edad}" id="edad" name="edad" placeholder="Escribe la edad" type="text">
+            <input field="*{edad}" id="edad" name="edad" placeholder="Escribe la edad" value=0 type="number">
         </div>
         <div>
             <label for="foto">Foto</label>
-            <input th:field="*{foto}" id="foto" name="foto" placeholder="Escribe la url de la foto" type="text">
+            <input field="*{foto}" id="foto" name="foto" placeholder="Escribe la url de la foto" type="text">
         </div>
         <div>
-            <label for="usuario">Usuario</label>
-            <input th:field="*{usuario}" id="usuario" name="usuario" placeholder="Escribe tu nombre de usuario" type="text">
+            <label for="nick">Usuario</label>
+            <input field="*{nick}" id="nick" name="nick" placeholder="Escribe tu nombre de usuario" type="text">
         </div>
         <div>
             <label for="contrasena">Contraseña</label>
-            <input th:field="*{contrasena}" id="contrasena" name="contrasena" placeholder="Escribe la contraseña" type="text">
+            <input field="*{contrasena}" id="contrasena" name="contrasena" placeholder="Escribe la contraseña" type="password">
         </div>
         <button type="submit">Guardar</button>
     </form>
