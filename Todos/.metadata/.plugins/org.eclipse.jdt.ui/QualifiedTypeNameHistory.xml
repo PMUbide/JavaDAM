@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.awt.image.ImageObserver"/>
-    <fullyQualifiedTypeName name="Eventos1.MarcoVentana"/>
-    <fullyQualifiedTypeName name="java.awt.event.WindowListener"/>
-    <fullyQualifiedTypeName name="Eventos1.WindowAdapter"/>
-    <fullyQualifiedTypeName name="java.awt.event.WindowAdapter"/>
-    <fullyQualifiedTypeName name="java.awt.event.WindowStateListener"/>
-    <fullyQualifiedTypeName name="Eventos1.MarcoTeclado"/>
-    <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
-    <fullyQualifiedTypeName name="Eventos1.TeclaPresionada"/>
-    <fullyQualifiedTypeName name="Eventos1.MarcoMouse"/>
-    <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
-    <fullyQualifiedTypeName name="Eventos1.LaminaMouse"/>
-    <fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
-    <fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
-    <fullyQualifiedTypeName name="java.awt.GraphicsEnvironment"/>
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="java.awt.Graphics"/>
     <fullyQualifiedTypeName name="java.awt.event.FocusListener"/>
@@ -50,14 +33,31 @@
     <fullyQualifiedTypeName name="pruebas2.ListaEnlazadaCircular"/>
     <fullyQualifiedTypeName name="Pilas.Pila"/>
     <fullyQualifiedTypeName name="EnlazadasDobles.ListaDoble"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="antlr.collections.List"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.proyectoSpring.repository.GrupoRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="com.proyectoSpring.service.IGrupoService"/>
+    <fullyQualifiedTypeName name="com.proyectoSpring.model.Grupo"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.proyectoSpring.service.IRutaService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="juegoJava.MySqlAccess"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="com.sun.jdi.connect.spi.Connection"/>
 </qualifiedTypeNameHistroy>

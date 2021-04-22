@@ -27,7 +27,6 @@ public class UsuarioServiceImpl implements IUsuarioService {
 		 * Recuerda que repository implementaba la interfaz CrudRepository.
 		 * ¡Investiga qué consultas se pueden hacer de manera sencilla!
 		 */
-		System.out.println("HACE el SELECT");
 		return (List<Usuario>) repository.findAll();
 	}
 
@@ -41,10 +40,21 @@ public class UsuarioServiceImpl implements IUsuarioService {
 			 * Recuerda que repository implementaba la interfaz CrudRepository.
 			 * ¡Investiga qué consultas se pueden hacer de manera sencilla!
 			 */
-			System.out.println("VOLANDO VOY");
-			System.out.println(usuario.toString());
-			repository.save(usuario);
-			return true;
+			List<Usuario> usuarios = findAll();
+			boolean encontrado = false;
+			for(Usuario us: usuarios) {
+				if (us.getNick().equals(usuario.getNick())) {
+					encontrado = true;
+					break;
+				}
+			}
+			if(encontrado) {
+				System.out.println("Ya existe ese nick de usuario");
+				return false;
+			} else {
+				repository.save(usuario);
+				return true;
+			}
 		} catch(Exception e) {
 			System.out.println(e.toString());
 			return false;

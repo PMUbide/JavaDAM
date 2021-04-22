@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RUTAS</title>
+   
+</head>
+<body>
+    <h1>RUTAS</h1>
+
+    <div th:if="${not #lists.isEmpty(rutas)}">
+        <h2>
+            Rutas que hay:
+        </h2>
+        <p>
+            A continuación se muestran las rutas de la aplicación.
+        </p>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>url</th>
+            </tr>
+            <tr th:each="ruta : ${rutas}">
+                <td th:text="${ruta.id_ruta}"></td>
+                <td th:text="${ruta.nombre}"></td>
+                <td th:text="${ruta.urlMap}"></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h2>Añadir ruta: </h2>
+    <form action="/rutas/agregar" method="post">
+        
+        <div>
+            <label for="nombre">Nombre</label>
+            <input field="*{nombre}" id="nombre" name="nombre" placeholder="Escribe el nombre " type="text">
+        </div>
+        <div>
+            <label for="pto_inicio">Pto inicio</label>
+            <input field="*{pto_inicio}" id="pto_inicio" name="pto_inicio" placeholder="Escribe el punto de inicio" type="text">
+        </div>
+        <div>
+            <label for="pto_fin">Pto fin</label>
+            <input field="*{pto_fin}" id="pto_fin" name="pto_fin" placeholder="Escribe el punto final" type="text">
+        </div>
+        <div>
+            <label for="id_user">Id user</label>
+            <input field="*{id_user}" id="id_user" name="id_user" placeholder="Escribe el id_user" type="number">
+        </div>
+        <div>
+            <label for="descripcion">Descripcion</label>
+            <input field="*{descripcion}" id="descripcion" name="descripcion" placeholder="Escribe la descripcion" type="text">
+        </div>
+        <div>
+            <label for="urlMap">url Map google</label>
+            <input field="*{urlMap}" id="urlMap" name="urlMap" placeholder="Pega la urlMap de google" type="text">
+        </div>
+        <button type="submit">Guardar</button>
+    </form>
+
+</body>
+
+</html>

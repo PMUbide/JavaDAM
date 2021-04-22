@@ -13,7 +13,7 @@ import com.proyectoSpring.model.Usuario;
 import com.proyectoSpring.service.IUsuarioService;
 
 @Controller
-public class primerControlador {
+public class UsuarioControlador {
 
 	@Autowired
 	private IUsuarioService usuarioService;
@@ -28,17 +28,21 @@ public class primerControlador {
         System.out.println("usuarios size = " + usuarios.size());
         System.out.println(usuarios.get(2).getNombre());
         for(int i = 0; i < usuarios.size(); i++) {
-        	System.out.println(usuarios.get(i).getIdUser() + " - " + usuarios.get(i).getNombre() + " - ");
+        	System.out.println(usuarios.get(i).getId_user() + " - " + usuarios.get(i).getNombre());
         }
         // Envía los alumnos al html, para poder listarlos
         model.addAttribute("usuarios", usuarios);
         return "index";
     }
-	
+//	@GetMapping(path="/")
+//	public String index(Model model) {
+//
+//	    model.addAttribute("rutaCycle", new Ruta());
+//	    return "index";
+//	}
     @PostMapping(value = "/usuarios/agregar")
-    public String agregarAlumno(@ModelAttribute Usuario usuario, Model model) {
+    public String agregarUsuario(@ModelAttribute Usuario usuario, Model model) {
     	// Ejecuta la query "insert alumno"
-    	System.out.println("ESTOY ANTES DE USUARIO SERVICE");
         usuarioService.addUsuario(usuario);
         /*
          * Como explique en clase, una vez se ha añadido un nuevo alumno queremos
@@ -50,7 +54,7 @@ public class primerControlador {
         List<Usuario> usuarios = (List<Usuario>) usuarioService.findAll();
         System.out.println("Usuarios size = " + usuarios.size());
         for(int i = 0; i < usuarios.size(); i++) {
-        	System.out.println(usuarios.get(i).getIdUser() + " - " + usuarios.get(i).getNombre());
+        	System.out.println(usuarios.get(i).getId_user() + " - " + usuarios.get(i).getNombre());
         }
         model.addAttribute("usuarios", usuarios);
         return "index";

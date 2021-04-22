@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BICICLETA</title>
+   
+</head>
+
+<body>
+    <h1>GRUPOS</h1>
+
+    <div th:if="${not #lists.isEmpty(grupos)}">
+        <h2>
+            Grupos que hay:
+        </h2>
+        <p>
+            A continuación se muestran los grupos en la aplicación.
+        </p>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Fecha Salida: </th>
+                <th>Usuario</th>
+            </tr>
+            <tr th:each="grupo : ${grupos}">
+                <td th:text="${grupo.id_grupo}"></td>
+                <td th:text="${grupo.fechaSalida}"></td>
+                <td th:text="${grupo.aforoMax}"></td>
+            </tr>
+        </table>
+    </div>
+
+
+    
+</body>
+
+</html>

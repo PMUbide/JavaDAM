@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
 
 /**
  * Hay que crear una clase/entidad para cada una de las tablas de la BD sobre
@@ -23,49 +22,49 @@ import org.hibernate.annotations.GenericGenerator;
 public class Usuario implements Serializable {
 	// Esta línea tiene que estar pero no nos interesa, se autogenera cuando
 	// implementamos Serializable
-	private static final long	serialVersionUID	= 3233149207833106460L;
-
+	private static final long serialVersionUID = 3233149207833106460L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id_user")
-	private int					idUser;
+	private int id_user;
 
 	@Column(name = "nombre")
-	private String				nombre;
+	private String nombre;
 
 	@Column(name = "apellidos")
-	private String				apellidos;
+	private String apellidos;
 
 	@Column(name = "telefono")
-	private String				telefono;
+	private String telefono;
 
 	@Column(name = "ciudad")
-	private String				ciudad;
+	private String ciudad;
 
 	@Column(name = "bicicleta")
-	private String				bicicleta;
+	private String bicicleta;
 
 	@Column(name = "edad")
-	private int					edad;
+	private int edad;
 
 	@Column(name = "sexo")
-	private String				sexo;
+	private String sexo;
 
 	@Column(name = "foto")
-	private String				foto;
+	private String foto;
 
 	@Column(name = "nick")
-	private String				nick;
+	private String nick;
 
 	@Column(name = "contrasena")
-	private String				contrasena;
+	private String contrasena;
 
 	public Usuario() {
 
 	}
 
 	public Usuario(String nombre, String apellidos, String telefono, String ciudad, String bicicleta,
-			int edad, String sexo, String foto, String usuario, String contrasena) {
+			int edad, String sexo, String foto, String nick, String contrasena) {
+		System.out.println(edad);
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.telefono = telefono;
@@ -74,16 +73,22 @@ public class Usuario implements Serializable {
 		this.edad = edad;
 		this.sexo = sexo;
 		this.foto = foto;
-		this.nick = usuario;
+		this.nick = nick;
 		this.contrasena = contrasena;
 	}
 
-	public int getIdUser() {
-		return idUser;
+
+
+	public int getId_user() {
+		return id_user;
 	}
 
-	public void setIdUser(int idUser) {
-		this.idUser = idUser;
+	public void setId_user(int id_user) {
+		this.id_user = id_user;
+	}
+
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 
 	public String getNombre() {
@@ -154,7 +159,7 @@ public class Usuario implements Serializable {
 		return nick;
 	}
 
-	public void setNick(String nick) {
+	public void setnick(String nick) {
 		this.nick = nick;
 	}
 
@@ -166,13 +171,4 @@ public class Usuario implements Serializable {
 		this.contrasena = contrasena;
 	}
 
-	@Override
-	public String toString() {
-		return "Usuario [idUser=" + idUser + ", nombre=" + nombre + ", apellidos=" + apellidos + ", telefono="
-				+ telefono + ", ciudad=" + ciudad + ", bicicleta=" + bicicleta + ", edad=" + edad + ", sexo=" + sexo
-				+ ", foto=" + foto + ", nick=" + nick + ", contrasena=" + contrasena + "]";
-	}
-
-	
-	
 }

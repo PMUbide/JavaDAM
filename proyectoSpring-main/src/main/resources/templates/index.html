@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>BICICLETA</title>
-
-
+   
 </head>
 
 <body>
@@ -25,29 +24,31 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
-                <th>Apellidos</th>
                 <th>Usuario</th>
             </tr>
             <tr th:each="usuario : ${usuarios}">
-                <td th:text="${usuario.idUser}"></td>
+                <td th:text="${usuario.id_user}"></td>
                 <td th:text="${usuario.nombre}"></td>
-                <td th:text="${usuario.apellidos}"></td>
                 <td th:text="${usuario.nick}"></td>
-               <td th:text="${usuario.ciudad}"></td>
             </tr>
         </table>
     </div>
 
 
     <h2>Añadir Usuario: </h2>
-    <form th:object="${usuario}" th:action="@{/usuarios/agregar}" method="post">
+    <form action="/usuarios/agregar" method="post">
+        
         <div>
             <label for="nombre">Nombre</label>
             <input field="*{nombre}" id="nombre" name="nombre" placeholder="Escribe el nombre " type="text">
         </div>
         <div>
-            <label for="apellidos">Apellidos</label>
-            <input field="*{apellidos}" id="apellidos" name="apellidos" placeholder="Escribe el apellido" type="text">
+            <label for="apellidos">Apellido</label>
+            <input field="*{apellidos}" id="apellidos" name="apellidos" placeholder="Escribe los apellidos" type="text">
+        </div>
+        <div>
+            <label for="telefono">Teléfono</label>
+            <input field="*{telefono}" id="telefono" name="telefono" placeholder="Escribe el telefono" type="text">
         </div>
         <div>
             <label for="ciudad">Ciudad</label>
@@ -58,8 +59,8 @@
             <input field="*{bicicleta}" id="bicicleta" name="bicicleta" placeholder="Escribe la bicicleta" type="text">
         </div>
         <div>
-            <label for="telefono">Teléfono</label>
-            <input field="*{telefono}" id="telefono" name="telefono" placeholder="Escribe el telefono" type="text">
+            <label for="edad">Edad</label>
+            <input field="*{edad}" id="edad" name="edad" placeholder="Escribe la edad" type="number">
         </div>
 
         <p>Selecciona tu sexo</p>
@@ -72,19 +73,14 @@
             <input field="*{sexo}" type="radio" id="femenino" name="sexo" value="2">
             <label for="femenino">Femenino</label>
         </div>
-		
-		 
-        <div>
-            <label for="edad">Edad</label>
-            <input field="*{edad}" id="edad" name="edad" placeholder="Escribe la edad" value=0 type="number">
-        </div>
+
         <div>
             <label for="foto">Foto</label>
             <input field="*{foto}" id="foto" name="foto" placeholder="Escribe la url de la foto" type="text">
         </div>
         <div>
-            <label for="nick">Usuario</label>
-            <input field="*{nick}" id="nick" name="nick" placeholder="Escribe tu nombre de usuario" type="text">
+            <label for="nick">nick</label>
+            <input field="*{nick}" id="nick" name="nick" placeholder="Escribe tu nick" type="text">
         </div>
         <div>
             <label for="contrasena">Contraseña</label>
@@ -92,6 +88,7 @@
         </div>
         <button type="submit">Guardar</button>
     </form>
+    <a href=rutasCycle.html>AÑADE UNA RUTA</a>
 
 </body>
 
