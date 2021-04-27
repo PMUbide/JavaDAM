@@ -17,9 +17,6 @@ public class C {
 			operaciones[i][0] = Integer.parseInt(lineaSplit[0]);
 			operaciones[i][1] =	Integer.parseInt(lineaSplit[1]);
 		}
-		for (int i = 0; i < operaciones.length; i++) {
-//			System.out.println(operaciones[i][0] + " " + operaciones[i][0]);
-		}
 		//empezar programa.
 		for (int i = 0; i < operaciones.length; i++) {
 			int num1 = operaciones[i][0];

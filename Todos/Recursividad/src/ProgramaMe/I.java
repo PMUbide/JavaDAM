@@ -48,8 +48,7 @@ public class I {
 
 	public static void main(String[] args) {
 		in = new Scanner(System.in);
-		while (casoDePrueba()) {
-		}
+		while (casoDePrueba());
 	}
 
 }
