@@ -7,14 +7,41 @@ public class Tarea3 {
 //		3) Implementa un programa Java que dada una tabla de números enteros, muestre por pantalla sus valores de forma recursiva.
 //		4) Implementa un programa Java que dada una tabla de números enteros y un número N, devuelva true sí o sólo sí N se encuentra dentro de la tabla dada.
 //		5) Implementa un programa Java que dada una tabla multidimensional de números enteros, muestre todos los sus elementos por pantalla de forma recursiva.
-		int ejer1 = 8;
-		System.out.println(suma(ejer1));
-		int[] tabla = {2, 5, 7, 8, 34};
-		boolean existeNum = false;
-		existeNum = comprobarNum(tabla, 8);
-		System.out.println(existeNum);
-		int[][] multi = {{5, 2}, {1, 2}, {2, 3}, {2, 3}};
-		mostrarMulti(multi);
+//		int ejer1 = 8;
+//		System.out.println(suma(ejer1));
+//		int[] tabla = {2, 5, 7, 8, 34};
+//		boolean existeNum = false;
+//		existeNum = comprobarNum(tabla, 8);
+//		System.out.println(existeNum);
+//		int[][] multi = {{5, 2}, {1, 2}, {2, 3}, {2, 3}};
+//		mostrarMulti(multi);
+		System.out.println(calculaM(7));
+	}
+	
+//	Realiza una función recursiva que encuentre el primer valor N para el que la suma 1 + 2 + 3 + ... + N
+//	exceda a un valor M que se introduce por parámetro. 
+//	Es decir, si M vale:
+//	    1: devuelve 2
+//	    3: devuelve 3
+//	    7: devuelve 4
+//	    10: devuelve 5
+//	    15: devuelve 6
+	public static int calculaM(int num) {
+		return calculaM(num, 0);
+	}
+	
+	public static int calculaM(int num, int i) {
+		int j;
+		
+			j = j + i;
+			i--;
+		}
+		
+		if(i > num) {
+			return i;
+		}else {
+			return calculaM(num, i + 1);
+		}
 	}
 
 	public static int mostrarMulti(int[][] multi) {
