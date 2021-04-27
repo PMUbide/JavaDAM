@@ -3,60 +3,30 @@ package ProgramaMe;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CuelloPilotos {
+class PilotosQuike {
+
 	public static int izq = 0;
 	public static int der = 0;
 	public static void main(String[] args) {
-		//Leer fichero
-		Scanner in = new Scanner(System.in);
-		int veces = 0;
-		ArrayList<String[][]> lista = new ArrayList<String[][]>();
-		int lugarLista = -1;
-		boolean acaba = false;
-		while(!acaba) {
-			String linea = in.nextLine();
-			//Ver si la linea tiene espacios
-//			System.out.println(linea);
-			int fila = 0, columna = 0;
-			boolean espacios = false;
-//			acaba = false;
-			for (int i = 0; i < linea.length(); i++) {
-	            // Si el caracter en [i] es un espacio (' ') aumentamos el contador 
-	            if (linea.charAt(i) == ' ') {
-	            	espacios = true;
-	            }
-	        }
-			if(linea.equals("0 0")) {
-				acaba = true;
-//				System.out.println("se acaba");
-			}
-			if(!acaba) {
-				if(espacios) {
-					String[] lineaSplit = linea.split(" ");
-					columna = Integer.parseInt(lineaSplit[0]);
-					fila = Integer.parseInt(lineaSplit[1]);
-					String[][] circuito = new String[fila][columna];
-					lista.add(circuito);
-					veces = 0;
-					lugarLista += 1;
-				}else {
-					String[] lineaSplit = linea.split("");
-					for (int i = 0; i < lineaSplit.length; i++) {
-						lista.get(lugarLista)[veces][i] = lineaSplit[i];
-					}
-					veces++;
+		Scanner entrada = new Scanner(System.in);
+		int filas = entrada.nextInt();
+		int columnas = entrada.nextInt();
+		while (filas != 0 && columnas != 0) {
+			String[][] circuito = new String[filas][columnas];
+			for(int i = 0; i < filas; i++) {
+				for(int j = 0; j < columnas; j++) {
+					circuito[i][j] = entrada.next();
 				}
-				
 			}
-			espacios = false;
-		}
-		
-		for (int i = 0; i < lista.size(); i++) {
-			System.out.println(ejercicio(lista.get(i)));
-		}
-		
+			System.out.println(ejercicio(circuito));
+			filas = entrada.nextInt();
+			columnas = entrada.nextInt();
+		};
+		entrada.close();
 	}
-	
+		
+				
+			
 	public static String ejercicio(String[][] circuito) {
 		ArrayList<Double> coords = new ArrayList<Double>();
 		coords.clear();
@@ -135,16 +105,6 @@ public class CuelloPilotos {
 				izq = izq + 1;
 			}
 		}
-	}
-	
-	public static void mostrarArray(String[][] lista) {
-		for (int i = 0; i < lista.length; i++) {
-			System.out.println();
-			for (int j = 0; j < lista.length; j++) {
-				System.out.print(lista[i][j]);
-			}
-		}
-		
 	}
 
 }
