@@ -14,7 +14,6 @@ public class MovilidadSostenible {
 			comando[i] = Integer.parseInt(lineaS[i]);
 		}
 		//Array pa guardar lineas
-//		System.out.println("---" + comando[1]);
 		int[][] lineasBici = new int[comando[1]][2];
 		//ahora entrada para las lineas bici.
 		for (int i = 0; i < comando[1] ; i++) {
@@ -24,15 +23,7 @@ public class MovilidadSostenible {
 				lineasBici[i][j] = Integer.parseInt(lineaS[j]);
 			}
 		}
-//		System.out.println("mostrar lineas");
-//		for (int i = 0; i < lineasBici.length; i++) {
-//			System.out.println();
-//			for (int j = 0; j < lineasBici[i].length; j++) {
-//				System.out.println(lineasBici[i][j]);
-//			}
-//		}
 		comprobarPuntos(lineasBici, comando[0]);
-	
 		
 	}
 
@@ -43,11 +34,9 @@ public class MovilidadSostenible {
 			numerosFinal[i][0] = numSuma;
 			numSuma++;
 		}
-		
 		for (int i = 0; i < numerosFinal.length; i++) {
 			numerosFinal[i][1] = siono(lineas, numerosFinal[i][0]);
 		}
-
 		boolean pie = true;
 		for (int i = 0; i < numerosFinal.length; i++) {
 			if(numerosFinal[i][1] == 0) {
@@ -69,6 +58,13 @@ public class MovilidadSostenible {
 		int puntoInicio = 1;
 		int puntoFin = acabar;
 		int suma = 0;
+		for (int i = 0; i < lineas.length; i++) {
+			if(puntoInicio == lineas[i][0] && lineas[i][1] == acabar) {
+				return 1;
+			}else if(puntoInicio == lineas[i][1] && lineas[i][0] == acabar) {
+				return 0;
+			}
+		}
 		while(suma < puntoFin || !fin) {
 			for (int i = 0; i < lineas.length; i++) {
 				if(puntoInicio == lineas[i][0] && lineas[i][1] > puntoInicio) {
@@ -80,26 +76,18 @@ public class MovilidadSostenible {
 				}
 			}
 			suma++;	
-//			System.out.println("inicio " + puntoInicio + " suma " + suma);
 			if(puntoInicio == puntoFin) {
 				fin = true;
 				encontrado = true;
-//				System.out.println("BICI");
 			}else {
 				fin = true;
-//				System.out.println("NA");
 			}
 		}
-		
 		if(fin && encontrado) {
-//			System.out.println("BICI");
 			return 1;
 		}else {
-//			System.out.println("A PIE");
 			return 0;
 		}
-		
-		
 	}
 	
 	
