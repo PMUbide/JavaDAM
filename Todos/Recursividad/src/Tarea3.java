@@ -9,13 +9,14 @@ public class Tarea3 {
 //		5) Implementa un programa Java que dada una tabla multidimensional de números enteros, muestre todos los sus elementos por pantalla de forma recursiva.
 //		int ejer1 = 8;
 //		System.out.println(suma(ejer1));
-//		int[] tabla = {2, 5, 7, 8, 34};
-//		boolean existeNum = false;
-//		existeNum = comprobarNum(tabla, 8);
-//		System.out.println(existeNum);
+		int[] tabla = {2, 5, 7, 8, 34};
+		boolean existeNum = false;
+//		recorrerArray(tabla);
+		existeNum = comprobarNum(tabla, 8);
+		System.out.println(existeNum);
 //		int[][] multi = {{5, 2}, {1, 2}, {2, 3}, {2, 3}};
 //		mostrarMulti(multi);
-		System.out.println(calculaM(7));
+//		System.out.println(calculaM(1));
 	}
 	
 //	Realiza una función recursiva que encuentre el primer valor N para el que la suma 1 + 2 + 3 + ... + N
@@ -26,21 +27,31 @@ public class Tarea3 {
 //	    7: devuelve 4
 //	    10: devuelve 5
 //	    15: devuelve 6
-	public static int calculaM(int num) {
-		return calculaM(num, 0);
+	
+	public static void recorrerArray(int[] tabla) {
+		recorrerArray(tabla, 0);
+	}
+	public static void recorrerArray(int[] tabla, int i) {
+		if(i < tabla.length) {
+			System.out.println(i + " - " + tabla[i]);
+			recorrerArray(tabla, i + 1);
+		}
 	}
 	
-	public static int calculaM(int num, int i) {
-		int j;
-		
-			j = j + i;
-			i--;
-		}
-		
+	
+	
+	
+	
+	public static int calculaM(int num) {
+		return calculaM(num, 0, 0);
+	}
+	
+	public static int calculaM(int num, int i, int j) {
 		if(i > num) {
-			return i;
+			return j;
 		}else {
-			return calculaM(num, i + 1);
+			i = i + j;
+			return calculaM(num, i + 1, j + 1);
 		}
 	}
 
@@ -64,16 +75,25 @@ public class Tarea3 {
 	
 	
 	public static boolean comprobarNum(int[] tabla, int m) {
-		return comprobarNum(tabla, tabla.length - 1 , m);
+		return comprobarNum(tabla, 0 , m);
 	}
 	
 	public static boolean comprobarNum(int[] tabla, int i, int m) {
-		if(i == 0) return false;
-		if(tabla[i] == m) {
-			return true;
+		if(i < tabla.length) {
+			if(tabla[i] == m) {
+				return true;
+			}else {
+				return comprobarNum(tabla, i + 1, m);
+			}
 		}else {
-			return comprobarNum(tabla, i - 1, m);
+			return false;
 		}
+//		if(i == 0) return false;
+//		if(tabla[i] == m) {
+//			return true;
+//		}else {
+//			return comprobarNum(tabla, i - 1, m);
+//		}
 	}
 	
 	
