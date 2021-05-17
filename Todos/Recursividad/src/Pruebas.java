@@ -4,6 +4,8 @@ public class Pruebas {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("resultado " + count8(8128838));
+		
+		
 	}
 
 	public static int count8(int n) {
