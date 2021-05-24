@@ -15,8 +15,6 @@ import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class Tarea1  {
-
-	
 	public static void main(String[] args)  {
 //		TAREA 1 :
 //			Realiza un programa Java que, dado el fichero texto.txt, muestre por pantalla :
@@ -34,14 +32,11 @@ public class Tarea1  {
 //			El ojos ERROR
 //			Un pato ACIERTO
 //			Los árbol ERROR
-		
 		HashMap <Integer, Integer> inventario = new HashMap<Integer, Integer>();
 		try {
 			Scanner a = new Scanner(new File("files/texto.txt"));
 			ArrayList<String> lineas = new ArrayList<String>();
 			a = new Scanner(new File("files/texto.txt"));
-			int count = 0;
-			String linea = "";
 			while(a.hasNextLine()) {
 				lineas.add(a.nextLine());
 			}
@@ -53,39 +48,56 @@ public class Tarea1  {
 					incrementValue(inventario, separad[j].length());
 				}
 			}
-			
-			List<Entry<Integer, Integer>> list = new ArrayList<>(inventario.entrySet());
-			list.sort(Entry.comparingByValue());
-//			list.forEach(System.out::println);
-			
-			for (int i = list.size() - 1; i >= 0; i--) {
-				System.out.println(list.get(i).getKey() + " - - - " + list.get(i).getValue());
-			}
-			
-//			list.forEach(entry -> {
-//			    System.out.println(entry.getKey() + " - -  " + entry.getValue());
-//			});
-			
-			inventario.entrySet().forEach(entry -> {
-			    System.out.println(entry.getKey() + " " + entry.getValue());
-			});
+			//Mostrar: 
 			System.out.println("Total de lineas " + lineas.size());
 			System.out.println("Total de caracteres " + totalCaracteres(lineas));
-			//palabras de caracteres
-			palabrasCaracteres(lineas);
-			
+			List<Entry<Integer, Integer>> list = new ArrayList<>(inventario.entrySet());
+			list.sort(Entry.comparingByValue());
+			for (int i = list.size() - 1; i >= 0; i--) {
+				System.out.println("Carácteres: " + list.get(i).getKey() + " - - - " + list.get(i).getValue());
+			}
 			//Recorrer para ver si es articulo.
 			for (int i = 0; i < lineas.size(); i++) {
-				
+//				System.out.println("-----> " + lineas.get(i));
+				String fila = lineas.get(i);
+				fila = fila.replace(",", "").replace(".", "").replace(":", "").replace(";", "");
+				String [] separad = fila.split(" ");
+				for (int j = 0; j < separad.length; j++) {
+					//controlar que no sea la última palabra del texo.
+					if(i != lineas.size() -1 && j != separad.length -1) {
+						if(compruebaArticulos(separad[j])) {
+							if(encuentraEse(separad[j])) {
+								if(encuentraEse(separad[j+1])) {
+									System.out.println(separad[j] + " " + separad[j+1] + " ACIERTO");
+								}else {
+									System.out.println(separad[j] + " " + separad[j+1] + " ERROR");
+								}
+							}else {
+								if(encuentraEse(separad[j+1])) {
+									System.out.println(separad[j] + " " + separad[j+1] + " ERROR");
+								}else {
+									System.out.println(separad[j] + " " + separad[j+1] + " ACIERTO");
+								}
+							}
+						}
+					}
+				}
 			}
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		
 	}
 	
-	
+	/**
+	 * Método que si le envías una palabra comprueba si acaba en "s".
+	 * @param palabra
+	 * @return
+	 */
+	public static boolean encuentraEse(String palabra) {
+		if (palabra.substring(palabra.length() - 1, palabra.length()).equalsIgnoreCase("s")) return true;
+		return false;
+	}
 	
 	
 	/**
@@ -102,12 +114,6 @@ public class Tarea1  {
 		}
 		return false;
 	}
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * Método para añadir elementos a un HasMAp y vaya sumando.
@@ -128,60 +134,16 @@ public class Tarea1  {
 		}
 	}
 	
+
 	
-	
-	
-	public static void palabrasCaracteres(ArrayList<String> linea) {
-		int count = 0;
-		String lineaBuscar = "";
-		int[][] nuevo = new int [30][2];
-		for (int i = 0; i < linea.size(); i++) {
-			lineaBuscar = linea.get(i);
-			lineaBuscar = lineaBuscar.replace(",", "").replace(".", "").replace(":", "").replace(";", "");
-			System.out.println(lineaBuscar);
-			String[] separado = lineaBuscar.split(" ");
-			for (int j = 1; j < separado.length; j++) {
-				nuevo[separado[j].length()][0]++;
-				nuevo[separado[j].length()][1] = separado[j].length();
-			}
-			count += lineaBuscar.length();
-		}
-//		Arrays.sort(nuevo, new Comparator<int[]>() {
-//		    public int compare(int[] a, int[] b) {
-//		        return Double.compare(b[0], a[0]);
-//		    }
-//		});
-		nuevo = ordenarArray(nuevo);
-		
-		for (int i = 0; i < nuevo.length; i++) {
-			if(nuevo[i][0] != 0) {
-				System.out.println("Palabras con " + nuevo[i][1] + " caracteres = " + nuevo[i][0]);
-			}
-		}
-	}
-	
-	public static int[][] ordenarArray(int[][] array){
-		int a[][] = array;
-		for (int x = 0; x < a.length; x++) {
-	        for (int i = 1; i < a.length; i++) {
-	            if(a[i][0] < a[x][0]){
-	                int tmp = a[x][0];
-	                int tmp2 = a[x][1];
-	                a[x][0] = a[i][0];
-	                a[x][1] = a[i][1];
-	                a[i][0] = tmp;
-	                a[i][1] = tmp2;
-	            }
-	        }
-	    }
-	    return a;
-	}
-	
-	
+	/**
+	 * Método que 
+	 * @param linea
+	 * @return
+	 */
 	public static int totalCaracteres(ArrayList<String> linea) {
 		int count = 0;
 		String lineaBuscar = "";
-
 		for (int i = 0; i < linea.size(); i++) {
 			lineaBuscar = linea.get(i);
 			lineaBuscar = lineaBuscar.replaceAll(" ", "").replace(",", "").replace(".", "").replace(":", "");

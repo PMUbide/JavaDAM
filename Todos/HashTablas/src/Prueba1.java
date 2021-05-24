@@ -10,8 +10,15 @@ public class Prueba1 {
 		
 		Map map = Collections.synchronizedMap(new HashMap());
 		
-		Map <Integer, List> hasMao = new HasMap<Integer, List>();
+		Map <Integer, List> hasMao = new HashMap<Integer, List>();
 		
+		
+//		list.forEach(entry -> {
+//		    System.out.println(entry.getKey() + " - -  " + entry.getValue());
+//		});
+//		inventario.entrySet().forEach(entry -> {
+//		    System.out.println(entry.getKey() + " " + entry.getValue());
+//		});
 	}
 
 }
