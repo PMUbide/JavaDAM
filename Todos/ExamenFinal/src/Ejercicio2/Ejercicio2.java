@@ -68,6 +68,10 @@ public class Ejercicio2 {
 		
 	}
 	
+	/**
+	 * 
+	 * @param ruta 
+	 */
 	public static void muestraLocalidad(String ruta) {
 		//Creamos HashMap para ir almacenando los nombres como keys.
 		Map<String, Integer> map = new HashMap<String, Integer>();
