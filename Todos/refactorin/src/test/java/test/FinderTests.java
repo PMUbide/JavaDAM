@@ -16,7 +16,7 @@ import algorithm.Person;
 
 public class FinderTests {
 
-	Person	sue		= new Person("Sue",new Date(50, 0, 1) );
+	Person	sue		= new Person("Sue", new Date(50, 0, 1) );
 	Person	greg	= new Person("Greg", new Date(50, 0, 1));
 	Person	sarah	= new Person("Sarah", new Date(82, 0, 1));
 	Person	mike	= new Person("Mike", new Date(79, 0, 1));
