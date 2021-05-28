@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//leeArchivo y guardarlo en Array.
 		ArrayList<Usuario> usuariosBanco = new ArrayList<Usuario>();
 		try {
@@ -17,20 +16,24 @@ public class Main {
 				String linea = in.nextLine();
 				String[] lineaSplit = linea.split(";");
 				Usuario nuevo = new Usuario(lineaSplit[0], lineaSplit[1], Double.parseDouble(lineaSplit[2]));
+				//añade usuario al arrayList
 				usuariosBanco.add(nuevo);
 			}
 			in.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		//leer usuarios
 		for (Usuario usuario : usuariosBanco) {
 			System.out.println(usuario);
 		}
-		//Empieza el MENU
+		//Empieza el MENU con los usuarios leidos
 		Menu principal = new Menu(usuariosBanco);
 		principal.start();
+		//Vuelve a leer usuarios para ver cambios
+		for (Usuario usuario : usuariosBanco) {
+			System.out.println(usuario);
+		}
 	}
 
 }

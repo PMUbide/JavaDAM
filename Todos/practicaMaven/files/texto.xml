@@ -1,0 +1,27 @@
+<palabras>
+	<cadena>
+		<palabra>hola</palabra>
+		<vocales>hl</vocales>
+		<consonantes>oa</consonantes>
+	</cadena>
+	<cadena>
+		<palabra>verde</palabra>
+		<vocales>vrd</vocales>
+		<consonantes>ee</consonantes>
+	</cadena>
+	<cadena>
+		<palabra>rojo</palabra>
+		<vocales>rj</vocales>
+		<consonantes>oo</consonantes>
+	</cadena>
+	<cadena>
+		<palabra>ordenador</palabra>
+		<vocales>rdndr</vocales>
+		<consonantes>oeao</consonantes>
+	</cadena>
+	<cadena>
+		<palabra>botella</palabra>
+		<vocales>btll</vocales>
+		<consonantes>oea</consonantes>
+	</cadena>
+</palabras>

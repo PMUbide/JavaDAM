@@ -23,7 +23,7 @@ public class ListaDobleEjer2 {
 		listica.insert(uno7);
 		listica.insert(uno8);
 		//Eliminar con indices.
-		int[] posiciones = {8, 5, 1, 3};
+		int[] posiciones = {1, 4, 2, 7};
 		listica.deleteTotal(posiciones);
 		mostrar(listica);
 	}
